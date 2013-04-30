@@ -23,3 +23,56 @@
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
+
+.carousel-div{
+  background-repeat:no-repeat;
+  height:400px;
+  background-position:center;
+}
+
+.carousel-text{
+  position:absolute;
+  bottom:20px;
+  right:0;
+  font-family: "League Gothic";
+  text-align: right;
+  color: #d9d9d9;
+  text-shadow: 2px 2px -2px rgba(0, 0, 0, 0.4);
+  line-height: 100px;
+  word-spacing: 2px;
+  font-size:100px;
+  font-weight:bold; 
+  font-style:italic;
+}
+
+.toddler{
+  background-image :url(image_path('toddler.jpg'));
+}
+
+.hair{
+  background-image :url(image_path('hair.jpg'));
+}
+
+.dinner{
+  background-image :url(image_path('dinner.jpg'));
+}
+
+.clubbing{
+  background-image :url(image_path('clubbing.jpg'));
+}
+
+.footer-text{
+  font-family: "League Gothic";
+  color: #d9d9d9;
+  text-shadow: 1px 1px -1px rgba(0, 0, 0, 0.3);
+  word-spacing: 2px;
+  font-size:40px;
+  font-weight:bold; 
+  font-style:italic;
+}
+
+.carousel{
+  text-align:center;
+  margin-left:60px;
+  margin-right:60px;
+}
