@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'haml'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'devise'
 
 group :testing do
   gem 'rspec'

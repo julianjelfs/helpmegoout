@@ -1,5 +1,6 @@
 Sitters::Application.routes.draw do
-  
+  devise_for :users
+
   get "logout" => "user_session#destroy", :as => "logout"
   get "login" => "user_session#new", :as => "login"
   get "signup" => "user#new", :as => "signup"
