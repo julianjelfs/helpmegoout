@@ -1,8 +1,9 @@
 Sitters::Application.routes.draw do
-  get "user_session/new"
-
-  get "user_session/destroy"
-
+  
+  get "logout" => "user_session#destroy", :as => "logout"
+  get "login" => "user_session#new", :as => "login"
+  get "signup" => "user#new", :as => "signup"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

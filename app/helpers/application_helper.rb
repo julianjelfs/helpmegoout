@@ -1,5 +1,4 @@
 module ApplicationHelper
-  
   def display_base_errors resource
     return '' if (resource.errors.empty?) or (resource.errors[:base].empty?)
     messages = resource.errors[:base].map { |msg| content_tag(:p, msg) }.join
@@ -11,9 +10,5 @@ module ApplicationHelper
     HTML
     html.html_safe
   end
-  
-  def user_signed_in?
-    true
-  end
-  
+
 end
