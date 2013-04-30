@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,6 +10,15 @@ gem 'sqlite3'
 gem 'haml'
 gem 'bootstrap-sass'
 gem 'simple_form'
+
+group :testing do
+  gem 'rspec'
+  gem 'rspec-rails'
+end
+
+group :development do
+  gem 'cheat'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

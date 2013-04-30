@@ -1,4 +1,8 @@
 Sitters::Application.routes.draw do
+  get "user_session/new"
+
+  get "user_session/destroy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
