@@ -11,5 +11,6 @@ class User < ActiveRecord::Base
   
   has_many :request, :dependent => :destroy
   has_many :child, :dependent => :destroy
+  has_and_belongs_to_many :circle
   
 end

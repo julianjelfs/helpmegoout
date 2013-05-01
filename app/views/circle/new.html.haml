@@ -1,0 +1,8 @@
+%h2 Create a circle
+= simple_form_for @circle, :url => {:action => "create"}  do |r|
+  = r.error_notification
+  .form-inputs
+    = r.input :user_id, :as => :hidden
+    = r.input :name, :required => true, :autofocus => true
+    = r.input :description, :required => true
+    = r.button :submit, "Save"

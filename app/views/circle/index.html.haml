@@ -1,0 +1,13 @@
+%h2 These are the circles that you currenly belong to
+
+%table.table
+  %tr
+    %th Owner
+    %th Name
+    %th Description
+    
+  - @circles.each do |c|
+    %tr
+      %td= c.user.email
+      %td= c.name
+      %td= c.description

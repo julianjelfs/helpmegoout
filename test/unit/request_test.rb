@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class RequestTest < ActiveSupport::TestCase
-  test "this is my first requests test" do
-     assert true
+  test "request must have a user id" do
+     assert !Request.new.valid?
+     assert Request.new({:user_id => 1}).valid?
   end
 end

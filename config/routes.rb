@@ -1,13 +1,8 @@
 Sitters::Application.routes.draw do
-  get "request/index"
 
   devise_for :users
-
-  get "logout" => "user_session#destroy", :as => "logout"
-  get "login" => "user_session#new", :as => "login"
-  get "signup" => "user#new", :as => "signup"
-  
   resources :request
+  resources :circle
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

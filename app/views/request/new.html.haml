@@ -1,3 +1,10 @@
-%h2 Enter the details of when you would like to go out
-
-  
+%h2 Register
+= simple_form_for @request, :url => {:action => "create"}  do |r|
+  = r.error_notification
+  .form-inputs
+    = r.input :user_id, :as => :hidden
+    = r.input :date, :required => true, :autofocus => true
+    = r.input :start_time, :required => true
+    = r.input :end_time, :required => true
+    = r.input :description, :required => true
+    = r.button :submit, "Save"
