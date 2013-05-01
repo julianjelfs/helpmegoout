@@ -15,6 +15,8 @@ gem 'devise'
 group :testing do
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'autotest-standalone'
+  gem 'autotest-rails'
 end
 
 group :development do

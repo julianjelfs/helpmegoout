@@ -1,0 +1,17 @@
+%h2 Can you babysit on any of the following dates?
+
+%table.table
+  %tr
+    %th Date
+    %th Friend
+    %th Description
+    %th Start
+    %th End
+    
+  - @reqs.each do |r|
+    %tr
+      %td= r.date
+      %td= r.user.email
+      %td= r.description
+      %td
+      %td

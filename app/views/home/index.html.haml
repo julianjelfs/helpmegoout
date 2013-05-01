@@ -1,4 +1,4 @@
-#myCarousel.carousel.slide{"data-interval" => "2000"}
+#myCarousel.carousel.slide{"data-interval" => "3000"}
   %ol.carousel-indicators
     %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
     %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
@@ -22,4 +22,20 @@
   %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
   %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
 
-.footer-text Sign up for carefree nights out
+.footer-text Register now and save your marriage
+
+%hr
+
+.row.explain
+  .span5.offset1.well 
+    Simply create one or more circles of friends who you trust to look after your children
+    
+  .span5.well 
+    When you want to go out, share your request with one or more of your circles here and
+    wait for one of your friends to volunteer
+
+- content_for :script do
+  :javascript
+    $(function(){
+      $("#myCarousel").carousel({interval:3000});
+    });

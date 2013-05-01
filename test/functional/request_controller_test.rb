@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CirleTest < ActiveSupport::TestCase
+class RequestControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
