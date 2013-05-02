@@ -5,7 +5,7 @@ class CircleController < ApplicationController
   def index
     @circles = current_user.circle.all
   end
-  
+
   def new
     @circle = Circle.new
     @circle.user_id = current_user.id
@@ -17,7 +17,7 @@ class CircleController < ApplicationController
     if current_user.save
       redirect_to new_request_path
     else
-      redirect_to :action => "new"
+      redirect_to :action => 'new'
     end
   end
   
