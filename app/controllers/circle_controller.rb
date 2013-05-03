@@ -8,17 +8,37 @@ class CircleController < ApplicationController
 
   def new
     @circle = Circle.new
-    @circle.user_id = current_user.id
+    @circle.owner_id = current_user.id
   end
   
   def create
     c = Circle.new(params[:circle])
-    current_user.circle << c
-    if current_user.save
-      redirect_to new_request_path
+    if c.valid?
+      current_user.circle << c
+      redirect_to circle_index_url, notice: 'Circle successfully created'
     else
       redirect_to :action => 'new'
     end
   end
-  
+
+  def edit
+    @circle = Circle.find(params[:id])
+  end
+
+  def update
+    @circle = Circle.find(params[:id])
+    if @circle.update_attributes(params[:circle])
+      redirect_to circle_index_url, notice: 'Circle successfully updated'
+    else
+      render action: 'edit'
+    end
+  end
+
+  def destroy
+    @circle = Circle.find(params[:id])
+    @circle.destroy
+    redirect_to circle_index_url
+  end
+
+
 end

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130501195045) do
+ActiveRecord::Schema.define(:version => 20130503163220) do
+
+  create_table "candidates", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "candidates_circles", :id => false, :force => true do |t|
+    t.integer "candidate_id"
+    t.integer "circle_id"
+  end
 
   create_table "children", :force => true do |t|
     t.string   "name"
@@ -24,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20130501195045) do
   create_table "circles", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.integer  "user_id"
+    t.integer  "owner_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

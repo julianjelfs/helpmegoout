@@ -1,6 +1,6 @@
-= simple_form_for @circle, :url => {:action => 'create'}  do |r|
+= simple_form_for @circle, :url => {:action => 'update'}  do |r|
   = r.button :submit, 'Save', :class => "btn pull-right"
-  %h2 Create a circle
+  %h2 Add people to your circle
   = r.error_notification
   .form-inputs
     = r.input :owner_id, :as => :hidden

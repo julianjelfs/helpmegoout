@@ -1,11 +1,23 @@
 class Circle < ActiveRecord::Base
-  attr_accessible :description, :name, :user_id
+  before_destroy :clear_associations
+  attr_accessible :description, :name, :owner_id
   
   validates_presence_of :description
   validates_presence_of :name
-  validates_presence_of :user_id
+  validates_presence_of :owner_id
   
   has_and_belongs_to_many :request
   has_and_belongs_to_many :user
-  belongs_to :user
+  has_and_belongs_to_many :candidate
+  belongs_to :owner
+
+
+  private
+    def clear_associations
+      self.user.clear
+      self.request.clear
+      self.candidate.clear
+    end
+
+
 end

@@ -1,5 +1,6 @@
-%h2 Register
 = simple_form_for @request, :url => {:action => "create"}  do |r|
+  = r.button :submit, "Save", :class => "pull-right btn"
+  %h2 When you would like to go out?
   = r.error_notification
   .form-inputs
     = r.input :user_id, :as => :hidden
@@ -7,4 +8,3 @@
     = r.input :start_time, :required => true
     = r.input :end_time, :required => true
     = r.input :description, :required => true
-    = r.button :submit, "Save"
