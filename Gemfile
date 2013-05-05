@@ -12,6 +12,10 @@ gem 'devise'
 gem 'rake', '~> 0.8.7'
 gem 'ZenTest', '4.6.0'
 
+group :production do
+  gem 'pg'
+end
+
 group :testing do
   gem 'rspec'
   gem 'rspec-rails'
