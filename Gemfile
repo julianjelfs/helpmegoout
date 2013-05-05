@@ -12,6 +12,7 @@ gem "bootstrap-sass", "2.3.1.0"
 gem 'simple_form'
 gem 'devise'
 gem 'rake', '~> 0.8.7'
+gem 'ZenTest', '4.6.0'
 
 group :testing do
   gem 'rspec'
