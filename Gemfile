@@ -5,7 +5,7 @@ gem 'rails'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'therubyracer'
+
 gem 'sqlite3'
 gem 'haml'
 gem "bootstrap-sass", "2.3.1.0"
@@ -21,6 +21,7 @@ end
 
 group :development do
   gem 'cheat'
+  gem 'therubyracer'
 end
 
 # Gems used only for assets and not required
