@@ -44,15 +44,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/circle/index.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="67" selection-start="41" selection-end="67" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="edit.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/circle/edit.html.haml">
           <provider selected="true" editor-type-id="text-editor">
@@ -80,10 +71,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="25" selection-start="324" selection-end="324" vertical-scroll-proportion="0.38406828">
+            <state line="40" column="22" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile.lock" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="32" selection-start="642" selection-end="642" vertical-scroll-proportion="0.5334282">
               <folding />
             </state>
           </provider>
@@ -950,11 +950,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/candidates_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="55" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/candidate.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="28" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" />
@@ -1047,7 +1042,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="25" selection-start="324" selection-end="324" vertical-scroll-proportion="0.38406828">
+        <state line="40" column="22" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="32" selection-start="642" selection-end="642" vertical-scroll-proportion="0.5334282">
           <folding />
         </state>
       </provider>
