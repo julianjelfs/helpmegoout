@@ -1,8 +1,25 @@
-= simple_form_for @circle, :url => {:action => 'update'}  do |r|
+= simple_form_for @circle, :html => {:class => 'form-horizontal' }, :url => {:action => 'update'}  do |r|
   = r.button :submit, 'Save', :class => "btn pull-right"
   %h2 Add people to your circle
   = r.error_notification
   .form-inputs
     = r.input :owner_id, :as => :hidden
     = r.input :name, :required => true, :autofocus => true
-    = r.input :description, :required => true
+    = r.input :description, :required => true, input_html: { rows: '5' }
+    = label_tag("People", nil, :class => "control-label")
+    .control-group
+      .controls
+        %input(class="typeahead" type="text" autocomplete="off" )
+        %p
+        .well{style:'width:180px;max-height:300px;overflow-y:auto'}
+          - @circle.user.each do |u|
+            %div
+              = u.email
+
+- content_for :script do
+  :javascript
+    $(function(){
+      $("input.typeahead").typeahead({
+         source : ['dave', 'jane', 'sue', 'pete', 'mic']
+      });
+    });
