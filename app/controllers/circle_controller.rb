@@ -27,6 +27,22 @@ class CircleController < ApplicationController
 
   def update
     @circle = Circle.find(params[:id])
+    current_users = @circle.user.all.map {|u| u.email }
+
+    params[:users].each do |u|
+      if(!current_users.include? u)
+        newuser = User.where("email = ?", u).first
+        if(newuser)
+          @circle.user << newuser
+        else
+           candidate = Candidate.where("email = ?", u).first
+           if(candidate)
+             @circle.candidate << candidate
+           end
+        end
+      end
+    end
+
     if @circle.update_attributes(params[:circle])
       redirect_to circle_index_url, notice: 'Circle successfully updated'
     else
@@ -40,5 +56,18 @@ class CircleController < ApplicationController
     redirect_to circle_index_url
   end
 
+  def friend_search()
+      #find users or candidates in my circles that match the prefix
+    prefix = params[:prefix]
+    users = []
+    User.all.each do |u|
+      users << u.email
+    end
+    Candidate.all.each do |c|
+      users << c.email
+    end
+
+    render :json => users
+  end
 
 end

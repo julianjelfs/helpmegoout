@@ -11,8 +11,13 @@
       .controls
         %input(class="typeahead" type="text" autocomplete="off" )
         %p
-        .well{style:'width:180px;max-height:300px;overflow-y:auto'}
+        #circle_users.well{style:'width:180px;max-height:300px;overflow-y:auto'}
           - @circle.user.each do |u|
+            = hidden_field_tag("users[]", u.email)
+            %div
+              = u.email
+          - @circle.candidate.each do |u|
+            = hidden_field_tag("users[]", u.email)
             %div
               = u.email
 
@@ -20,6 +25,15 @@
   :javascript
     $(function(){
       $("input.typeahead").typeahead({
-         source : ['dave', 'jane', 'sue', 'pete', 'mic']
+         source : function(prefix, process){
+            $.post('/circle/friend-search/' + prefix, function(result){
+              process(result);
+            });
+         },
+         updater : function(item){
+            var friend = $("<input type='hidden' name='users[]' value='" + item + "'/><div>" + item + "</div>");
+            friend.appendTo("#circle_users");
+            return "";
+         }
       });
     });
