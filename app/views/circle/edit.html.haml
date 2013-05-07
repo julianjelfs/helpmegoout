@@ -1,25 +1,30 @@
-= simple_form_for @circle, :html => {:class => 'form-horizontal' }, :url => {:action => 'update'}  do |r|
-  = r.button :submit, 'Save', :class => "btn pull-right"
+= simple_form_for @circle, :html => {:class => 'form' }, defaults: { input_html: { class: 'input-xlarge' } }, :url => {:action => 'update'}  do |r|
+  = r.button :submit, 'Save', :class => "btn pull-right btn-danger"
   %h2 Add people to your circle
   = r.error_notification
   .form-inputs
-    = r.input :owner_id, :as => :hidden
-    = r.input :name, :required => true, :autofocus => true
-    = r.input :description, :required => true, input_html: { rows: '5' }
-    = label_tag("People", nil, :class => "control-label")
-    .control-group
-      .controls
-        %input(class="typeahead" type="text" autocomplete="off" )
-        %p
-        #circle_users.well{style:'width:180px;max-height:300px;overflow-y:auto'}
-          - @circle.user.each do |u|
-            = hidden_field_tag("users[]", u.email)
-            %div
-              = u.email
-          - @circle.candidate.each do |u|
-            = hidden_field_tag("users[]", u.email)
-            %div
-              = u.email
+    .row-fluid
+      .span6
+        = r.input :owner_id, :as => :hidden
+        = r.input :name, :required => true, :autofocus => true
+        = r.input :description, :required => true, input_html: { rows: '5' }
+      .span6
+        = label_tag("People", nil, :class => "control-label")
+        .control-group
+          .controls
+            %input(class="typeahead input-xlarge" type="text" autocomplete="off" placeholder="Type here to add more people" )
+            %p
+            #circle_users.well
+              - @circle.user.each do |u|
+                .alert.alert-success
+                  = hidden_field_tag("users[]", u.email)
+                  %button.close(type="button" data-dismiss="alert") &times;
+                  = u.email
+              - @circle.candidate.each do |u|
+                .alert.alert-success
+                  = hidden_field_tag("users[]", u.email)
+                  %button.close(type="button" data-dismiss="alert") &times;
+                  = u.email
 
 - content_for :script do
   :javascript
@@ -31,7 +36,7 @@
             });
          },
          updater : function(item){
-            var friend = $("<input type='hidden' name='users[]' value='" + item + "'/><div>" + item + "</div>");
+            var friend = $("<div class='alert alert-success'><input type='hidden' name='users[]' value='" + item + "'/><button class='close' type='button' data-dismiss='alert'>&times;</button>" + item + "</div>");
             friend.appendTo("#circle_users");
             return "";
          }

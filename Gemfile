@@ -21,13 +21,13 @@ group :testing do
   gem 'rspec-rails'
   gem 'autotest-standalone'
   gem 'autotest-rails'
-  gem 'sqlite3'
+  #gem 'sqlite3'
 end
 
 group :development do
   gem 'cheat'
   gem 'therubyracer'
-  gem 'sqlite3'
+  #gem 'sqlite3'
 end
 
 # Gems used only for assets and not required

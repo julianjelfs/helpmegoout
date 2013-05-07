@@ -27,7 +27,8 @@ class CircleController < ApplicationController
 
   def update
     @circle = Circle.find(params[:id])
-    current_users = @circle.user.all.map {|u| u.email }
+    current_users = @circle.user.all.map {|u| u.email }.concat( @circle.candidate.all.map {|u| u.email } )
+    to_remove = []
 
     params[:users].each do |u|
       if(!current_users.include? u)
@@ -39,6 +40,20 @@ class CircleController < ApplicationController
            if(candidate)
              @circle.candidate << candidate
            end
+        end
+      end
+    end
+
+    current_users.each do |u|
+      if(!params[:users].include? u)
+        newuser = User.where("email = ?", u).first
+        if(newuser)
+          @circle.user.delete(newuser)
+        else
+          candidate =  Candidate.where("email = ?", u).first
+          if(candidate)
+            @circle.candidate.delete(candidate)
+          end
         end
       end
     end
@@ -56,17 +71,10 @@ class CircleController < ApplicationController
     redirect_to circle_index_url
   end
 
+  # this is really not good enough because it returns all users to the client
+  # needs to at very least restrict on prefix
   def friend_search()
-      #find users or candidates in my circles that match the prefix
-    prefix = params[:prefix]
-    users = []
-    User.all.each do |u|
-      users << u.email
-    end
-    Candidate.all.each do |c|
-      users << c.email
-    end
-
+    users = User.all.map {|u| u.email }.concat( Candidate.all.map {|u| u.email } )
     render :json => users
   end
 
