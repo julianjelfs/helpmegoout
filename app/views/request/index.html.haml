@@ -5,9 +5,18 @@
     %th Date
     %th Friend
     %th Message
+    %th(style="width:20px")
 
   - @reqs.each do |r|
     %tr
       %td= "#{r.date.strftime('%d/%m/%Y')} from #{r.start_time} to #{r.end_time}"
       %td= r.user.email
       %td= r.description
+      %td= link_to_unless r.user.id != current_user.id, raw('<i title="Cancel Request" class="icon icon-trash"></i>'), r, method: :delete, data: { confirm: 'Are you sure you want to cancel?' }
+
+- content_for :script do
+  :javascript
+    $(function(){
+      $("ul.nav>li").removeClass("active");
+      $("#nav-requests").addClass("active");
+    });

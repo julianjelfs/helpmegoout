@@ -8,3 +8,10 @@
     = r.input :start_time, :required => true
     = r.input :end_time, :required => true
     = r.input :description, :required => true
+
+- content_for :script do
+  :javascript
+    $(function(){
+      $("ul.nav>li").removeClass("active");
+      $("#nav-goout").addClass("active");
+    });

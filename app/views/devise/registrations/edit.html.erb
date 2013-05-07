@@ -25,3 +25,12 @@
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
 
 <%= link_to "Back", :back %>
+
+<% content_for :script do %>
+    <script type='text/javascript'>
+        $(function(){
+            $("ul.nav>li").removeClass("active");
+            $("#nav-manage").addClass("active");
+        });
+    </script>
+<% end %>

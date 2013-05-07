@@ -39,6 +39,8 @@ class CircleController < ApplicationController
            candidate = Candidate.where("email = ?", u).first
            if(candidate)
              @circle.candidate << candidate
+           else
+            @circle.candidate << Candidate.new(:email => u)
            end
         end
       end

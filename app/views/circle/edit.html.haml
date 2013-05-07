@@ -17,27 +17,57 @@
             #circle_users.well
               - @circle.user.each do |u|
                 .alert.alert-success
-                  = hidden_field_tag("users[]", u.email)
+                  = hidden_field_tag("users[]", u.email, :class => "user-field")
                   %button.close(type="button" data-dismiss="alert") &times;
                   = u.email
               - @circle.candidate.each do |u|
                 .alert.alert-success
-                  = hidden_field_tag("users[]", u.email)
+                  = hidden_field_tag("users[]", u.email, :class => "user-field")
                   %button.close(type="button" data-dismiss="alert") &times;
                   = u.email
 
 - content_for :script do
   :javascript
+    function validateEmail(email) {
+        var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return re.test(email);
+    }
+
+    function injectFriend(email){
+      $("<div class='alert alert-success'><input type='hidden' name='users[]' value='" + email + "'/><button class='close' type='button' data-dismiss='alert'>&times;</button>" + email + "</div>").appendTo("#circle_users");
+    }
+
     $(function(){
-      $("input.typeahead").typeahead({
+      $("ul.nav>li").removeClass("active");
+      $("#nav-circles").addClass("active");
+      $("input.typeahead")
+      .keypress(function(e){
+        if(e.which == 13){
+          e.preventDefault();
+          if(!validateEmail(e.target.value)){
+            alert("invalid email address");
+          } else {
+            injectFriend(e.target.value);
+            e.target.value = "";
+          }
+        }
+      }).typeahead({
          source : function(prefix, process){
             $.post('/circle/friend-search/' + prefix, function(result){
               process(result);
             });
          },
          updater : function(item){
-            var friend = $("<div class='alert alert-success'><input type='hidden' name='users[]' value='" + item + "'/><button class='close' type='button' data-dismiss='alert'>&times;</button>" + item + "</div>");
-            friend.appendTo("#circle_users");
+            var dup = false;
+            $("input.user-field").each(function(){
+              if($(this).val() == item){
+                dup = true;
+                return false;
+              }
+            });
+            if(!dup){
+              injectFriend(item);
+            }
             return "";
          }
       });

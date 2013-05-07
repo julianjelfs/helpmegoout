@@ -7,24 +7,24 @@
 .nav-collapse.collapse.navbar-responsive-collapse
   %ul.nav
     - if user_signed_in?
-      %li
+      %li#nav-goout
         = link_to('Go Out!', new_request_path)
-      %li
+      %li#nav-requests
         = link_to('Baby Sit', request_index_path)
-      %li
+      %li#nav-circles
         = link_to('My Circles', circle_index_path)
 
     - if user_signed_in?
-      %li
+      %li.account
         = link_to('Logout', destroy_user_session_path, :method=>'delete')
     - else
-      %li
+      %li.account
         = link_to('Login', new_user_session_path)
 
 
     - if user_signed_in?
-      %li
-        = link_to('Edit account', edit_user_registration_path)
+      %li#nav-manage.account
+        = link_to(current_user.email, edit_user_registration_path)
     - else
-      %li
+      %li.account
         = link_to('Register', new_user_registration_path)

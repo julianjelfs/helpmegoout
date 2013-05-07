@@ -30,5 +30,11 @@ class RequestController < ApplicationController
       redirect_to :action => "new"
     end
   end
+
+  def destroy
+    @request = Request.find(params[:id])
+    @request.destroy
+    redirect_to request_index_url
+  end
   
 end

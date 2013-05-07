@@ -90,8 +90,8 @@ body{
 
 .carousel{
   text-align:center;
-  margin-left:60px;
-  margin-right:60px;
+/*  margin-left:60px;
+  margin-right:60px;*/
 }
 
 .explain{
@@ -115,4 +115,24 @@ body{
     -moz-box-shadow: 3px 3px 3px rgba(76,43,47,.4);
     box-shadow: 3px 3px 3px rgba(76,43,47,.4);
   }
+}
+
+#circle_users {
+  background-color: $background;
+  max-height:400px;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+  background-color: lighten($yellow, 10%);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.5);
+  background-color: lighten($red,10%);
 }
