@@ -1,5 +1,5 @@
 = simple_form_for @circle, :html => {:class => 'form' }, defaults: { input_html: { class: 'input-xlarge' } }, :url => {:action => 'update'}  do |r|
-  = r.button :submit, 'Save', :class => "btn pull-right btn-danger"
+  = r.button :submit, 'Save', :class => "btn pull-right btn-primary"
   %h2 Add people to your circle
   = r.error_notification
   .form-inputs
@@ -7,7 +7,7 @@
       .span6
         = r.input :owner_id, :as => :hidden
         = r.input :name, :required => true, :autofocus => true
-        = r.input :description, :required => true, input_html: { rows: '5' }
+        = r.input :description, :required => true, input_html: { rows: '10' }
       .span6
         = label_tag("People", nil, :class => "control-label")
         .control-group

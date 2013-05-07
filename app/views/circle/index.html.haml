@@ -1,4 +1,4 @@
-= link_to 'New Circle', new_circle_path, :class => "btn btn-danger pull-right"
+= link_to 'New Circle', new_circle_path, :class => "btn btn-primary pull-right"
 %h2 These are the circles that you currenly belong to
 
 %table.table
@@ -6,13 +6,13 @@
     %th Owner
     %th Name
     %th Description
-    %th Add People
-    %th Delete
+    %th
+    %th
 
   - @circles.each do |c|
     %tr
       %td= User.find(c.owner_id).email
       %td= c.name
       %td= c.description
-      %td= link_to_unless c.owner_id != current_user.id, 'Add People', edit_circle_path(c)
-      %td= link_to_unless c.owner_id != current_user.id, 'Delete', c, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to_unless c.owner_id != current_user.id, raw('<i title="Edit Circle" class="icon icon-user"></i>'), edit_circle_path(c)
+      %td= link_to_unless c.owner_id != current_user.id, raw('<i title="Delete Circle" class="icon icon-trash"></i>'), c, method: :delete, data: { confirm: 'Are you sure?' }

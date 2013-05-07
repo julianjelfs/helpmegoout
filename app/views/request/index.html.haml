@@ -4,14 +4,10 @@
   %tr
     %th Date
     %th Friend
-    %th Description
-    %th Start
-    %th End
-    
+    %th Message
+
   - @reqs.each do |r|
     %tr
-      %td= r.date
+      %td= "#{r.date.strftime('%d/%m/%Y')} from #{r.start_time} to #{r.end_time}"
       %td= r.user.email
       %td= r.description
-      %td= r.start_time
-      %td= r.end_time

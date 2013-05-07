@@ -12,20 +12,33 @@
  *= require_tree .
  */
 
+$red:#e57152;
+$yellow:#e8df89;
+$btnPrimaryBackground:$red;
+$dark:#2c2e4c;
+$background:#ffffd6;
+$background:#f6f6f6;
+$white:#ffffff;
+
 body{
   font-family :"League Gothic";
 }
 
 .content {
-  background-color: #f6f6f6;
+  background-color: $background;
   padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
   -webkit-border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px;
-  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2);
-  -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.2);
-  box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+  -webkit-box-shadow: 3px 3px 3px rgba(76,43,47,.4);
+  -moz-box-shadow: 3px 3px 3px rgba(76,43,47,.4);
+  box-shadow: 3px 3px 3px rgba(76,43,47,.4);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($white), to($background));
+  background: -webkit-linear-gradient(top, $background, $white);
+  background: -moz-linear-gradient(top, $background, $white);
+  background: -ms-linear-gradient(top, $background, $white);
+  background: -o-linear-gradient(top, $background, $white);
 }
 
 .carousel-div{
@@ -39,8 +52,8 @@ body{
   bottom:0;
   right:10px;
   text-align: right;
-  color: #d9d9d9;
-  text-shadow: 2px 2px -2px rgba(0, 0, 0, 0.4);
+  color: $background;
+  text-shadow: 2px 2px -2px rgba(76,43,47, 0.4);
   line-height: 100px;
   word-spacing: 2px;
   font-size:90px;
@@ -67,6 +80,7 @@ body{
 .footer-text{
   text-align:center;
   color: #d9d9d9;
+  color: $red;
   text-shadow: 1px 1px -1px rgba(0, 0, 0, 0.3);
   font-size:2.5em;
   font-weight:bold;
@@ -79,9 +93,6 @@ body{
   margin-left:60px;
   margin-right:60px;
 }
-
-$yellow:#e8de67;
-$red:#e57152;
 
 .explain{
   color: #fff;
