@@ -1,0 +1,74 @@
+= simple_form_for (@circle) do |r|
+  = r.button :submit, 'Save', :class => "btn pull-right btn-primary"
+  %h2 Add people to your circle
+  = r.error_notification
+  .form-inputs
+    .row-fluid
+      .span6
+        = r.input :owner_id, :as => :hidden
+        = r.input :name, :required => true, :autofocus => true
+        = r.input :description, :required => true, input_html: { rows: '10' }
+      .span6
+        = label_tag("People", nil, :class => "control-label")
+        .control-group
+          .controls
+            %input(class="typeahead input-xlarge" type="text" autocomplete="off" placeholder="Type here to add more people" )
+            %p
+            #circle_users.well
+              - @circle.user.each do |u|
+                .alert.alert-success
+                  = hidden_field_tag("users[]", u.email, :class => "user-field")
+                  %button.close(type="button" data-dismiss="alert") &times;
+                  = u.email
+              - @circle.candidate.each do |u|
+                .alert.alert-success
+                  = hidden_field_tag("users[]", u.email, :class => "user-field")
+                  %button.close(type="button" data-dismiss="alert") &times;
+                  = u.email
+
+- content_for :script do
+  :javascript
+    function validateEmail(email) {
+        var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return re.test(email);
+    }
+
+    function injectFriend(email){
+      $("<div class='alert alert-success'><input type='hidden' name='users[]' value='" + email + "'/><button class='close' type='button' data-dismiss='alert'>&times;</button>" + email + "</div>").appendTo("#circle_users");
+    }
+
+    $(function(){
+      $("ul.nav>li").removeClass("active");
+      $("#nav-circles").addClass("active");
+      $("input.typeahead")
+      .keypress(function(e){
+        if(e.which == 13){
+          e.preventDefault();
+          if(!validateEmail(e.target.value)){
+            alert("invalid email address");
+          } else {
+            injectFriend(e.target.value);
+            e.target.value = "";
+          }
+        }
+      }).typeahead({
+         source : function(prefix, process){
+            $.post('/circle/friend-search/' + prefix, function(result){
+              process(result);
+            });
+         },
+         updater : function(item){
+            var dup = false;
+            $("input.user-field").each(function(){
+              if($(this).val() == item){
+                dup = true;
+                return false;
+              }
+            });
+            if(!dup){
+              injectFriend(item);
+            }
+            return "";
+         }
+      });
+    });

@@ -8,13 +8,17 @@ class CircleController < ApplicationController
 
   def new
     @circle = Circle.new
+    @circle.user << current_user
     @circle.owner_id = current_user.id
   end
   
   def create
-    c = Circle.new(params[:circle])
-    if c.valid?
-      current_user.circle << c
+    @circle = Circle.new(params[:circle])
+    if @circle.valid?
+      current_user.circle << @circle
+
+      process_users
+
       redirect_to circle_index_url, notice: 'Circle successfully created'
     else
       redirect_to :action => 'new'
@@ -25,8 +29,7 @@ class CircleController < ApplicationController
     @circle = Circle.find(params[:id])
   end
 
-  def update
-    @circle = Circle.find(params[:id])
+  def process_users
     current_users = @circle.user.all.map {|u| u.email }.concat( @circle.candidate.all.map {|u| u.email } )
     to_remove = []
 
@@ -36,14 +39,14 @@ class CircleController < ApplicationController
         if(newuser)
           @circle.user << newuser
         else
-           candidate = Candidate.where("email = ?", u).first
-           if(candidate)
-             @circle.candidate << candidate
-           else
-             c = Candidate.new(:email => u)
-             @circle.candidate << c
-             UserMailer.delay.invitation_email(current_user, c)
-           end
+          candidate = Candidate.where("email = ?", u).first
+          if(candidate)
+            @circle.candidate << candidate
+          else
+            c = Candidate.new(:email => u)
+            @circle.candidate << c
+            UserMailer.delay.invitation_email(current_user, c)
+          end
         end
       end
     end
@@ -61,6 +64,12 @@ class CircleController < ApplicationController
         end
       end
     end
+  end
+
+  def update
+    @circle = Circle.find(params[:id])
+
+    process_users
 
     if @circle.update_attributes(params[:circle])
       redirect_to circle_index_url, notice: 'Circle successfully updated'

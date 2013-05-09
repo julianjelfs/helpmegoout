@@ -1,8 +1,1 @@
-= simple_form_for @circle, :url => {:action => 'create'}  do |r|
-  = r.button :submit, 'Save', :class => "btn pull-right"
-  %h2 Create a circle
-  = r.error_notification
-  .form-inputs
-    = r.input :owner_id, :as => :hidden
-    = r.input :name, :required => true, :autofocus => true
-    = r.input :description, :required => true
+= render 'form'
