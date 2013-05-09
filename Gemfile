@@ -11,6 +11,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'rake', '~> 0.8.7'
 gem 'ZenTest', '4.6.0'
+gem 'delayed_job_active_record'
 
 group :production do
   gem 'pg'

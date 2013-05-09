@@ -3,8 +3,6 @@
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-	<h3>let's stick a tab strip in here to partition mandatory account stuff
-		with extra stuff like name, address, phone & children</h3>	
   <div class="form-inputs">
     <%= f.input :email, :required => true, :autofocus => true %>
     <%= f.input :password, :required => true %>

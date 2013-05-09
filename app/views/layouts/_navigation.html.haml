@@ -15,16 +15,16 @@
         = link_to('My Circles', circle_index_path)
 
     - if user_signed_in?
-      %li.account
+      %li
         = link_to('Logout', destroy_user_session_path, :method=>'delete')
     - else
-      %li.account
+      %li
         = link_to('Login', new_user_session_path)
 
 
     - if user_signed_in?
-      %li#nav-manage.account
+      %li#nav-manage
         = link_to(current_user.email, edit_user_registration_path)
     - else
-      %li.account
+      %li
         = link_to('Register', new_user_registration_path)
