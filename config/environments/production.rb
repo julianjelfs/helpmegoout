@@ -68,5 +68,15 @@ Sitters::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.action_mailer.default_url_options = { :host => 'helpmegoout.co.uk' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address => "smtp.sendgrid.com",
+      :port => 587,
+      :user_name => ENV['SENDGRID_USERNAME'],
+      :password => ENV['SENDGRID_PASSWORD'],
+      :authentication => :plain,
+      :domain => "heroku.com",
+      :enable_starttls_auto => true
+  }
 
 end
