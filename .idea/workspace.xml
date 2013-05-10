@@ -33,7 +33,7 @@
     <file path="/invitation_email.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368125954329" ignored="false" />
     <file path="/test.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368084108349" ignored="false" />
     <file path="/development.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368125576193" ignored="false" />
-    <file path="/production.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368172494125" ignored="false" />
+    <file path="/production.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368172765019" ignored="false" />
     <file path="/registrations_controller.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368134149136" ignored="false" />
     <file path="/Rails sitters: development" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368132027438" ignored="false" />
     <file path="/_form.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368135455420" ignored="false" />
@@ -109,7 +109,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="37" selection-start="2950" selection-end="2950" vertical-scroll-proportion="0.87234044">
+            <state line="72" column="36" selection-start="2730" selection-end="2730" vertical-scroll-proportion="0.7446808">
               <folding />
             </state>
           </provider>
@@ -988,7 +988,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="37" selection-start="2950" selection-end="2950" vertical-scroll-proportion="0.87234044">
+        <state line="72" column="36" selection-start="2730" selection-end="2730" vertical-scroll-proportion="0.7446808">
           <folding />
         </state>
       </provider>
