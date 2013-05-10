@@ -7,9 +7,11 @@ class CircleController < ApplicationController
   end
 
   def new
+    @title = "Create a new circle"
     @circle = Circle.new
     @circle.user << current_user
     @circle.owner_id = current_user.id
+    @readonly = false
   end
   
   def create
@@ -26,7 +28,9 @@ class CircleController < ApplicationController
   end
 
   def edit
+    @title = "Circle Details"
     @circle = Circle.find(params[:id])
+    @readonly = @circle.owner_id != current_user.id
   end
 
   def process_users

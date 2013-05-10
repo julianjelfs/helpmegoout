@@ -1,3 +1,5 @@
+-#= link_to "My Requests", request_index_path, :class => "btn btn-primary pull-right"
+-#= link_to "All Requests", request_index_path, :class => "btn btn-primary pull-right"
 %h2 Can you babysit on any of the following dates?
 
 %table.table
@@ -5,18 +7,78 @@
     %th Date
     %th Friend
     %th Message
+    %th Volunteer
+    %th(style="width:20px")
     %th(style="width:20px")
 
   - @reqs.each do |r|
+    - v = r.volunteer ? r.volunteer.email : nil
     %tr
-      %td= "#{r.date.strftime('%d/%m/%Y')} from #{r.start_time} to #{r.end_time}"
+      %td= "#{r.date.strftime('%d %B %Y')} from #{r.start_time} to #{r.end_time}"
       %td= r.user.email
       %td= r.description
-      %td= link_to_unless r.user.id != current_user.id, raw('<i title="Cancel Request" class="icon icon-trash"></i>'), r, method: :delete, data: { confirm: 'Are you sure you want to cancel?' }
+      %td= v
+      - if(r.user.id == current_user.id)
+        %td= link_to raw('<i title="Edit Request" class="icon icon-th-list"></i>'), edit_request_path(r), :class => "btn"
+        %td= link_to raw('<i title="Cancel Request" class="icon icon-trash"></i>'), r, method: :delete, data: { confirm: 'Are you sure you want to cancel?' }, :class=>"btn"
+      - else
+        %td
+        - if(!v)
+          %td
+            %button.btn.btn-success.accept(title="Yes I'd love to" data-request-id="#{r.id}")
+              %i.icon.icon-ok
+        - else
+          -if(v && v == current_user.email)
+            %td
+              %button.btn.btn-primary.reject(title="Sorry I can't anymore" data-request-id="#{r.id}")
+                %i.icon.icon-remove
+          - else
+            %td
+
+#accept-modal.modal.hide
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3 Accept request for help!
+  .modal-body
+    %p Can you babysit on this date?
+  .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} No
+    %button#confirm-accept.btn.btn-primary Yes I can
+
+#reject-modal.modal.hide
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3 Cancel baby sitting
+  .modal-body
+    %p Oh dear - have you decided that you can't babysit after all?
+  .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} No it's ok
+    %a.btn#confirm-reject.btn-primary{:href => "#"} I'm afraid so
 
 - content_for :script do
   :javascript
     $(function(){
+      var r = null;
       $("ul.nav>li").removeClass("active");
       $("#nav-requests").addClass("active");
+      $("button.reject").click(function(e){
+         $("#reject-modal").modal("show");
+         r = $(this).attr("data-request-id");
+      });
+      $("button.accept").click(function(e){
+         $("#accept-modal").modal("show");
+         r = $(this).attr("data-request-id");
+      });
+      $("#confirm-accept").click(function(e){
+        $("#accept-modal").modal("hide");
+        $.post("request/accept/" + r, function(data){
+          window.location.reload();
+        });
+      });
+      $("#confirm-reject").click(function(e){
+        $("#reject-modal").modal("hide");
+        $.post("request/reject/" + r, function(data){
+          window.location.reload();
+        });
+      });
     });

@@ -1,29 +1,33 @@
 = simple_form_for (@circle) do |r|
-  = r.button :submit, 'Save', :class => "btn pull-right btn-primary"
-  %h2 Add people to your circle
+  - if(!@readonly)
+    = r.button :submit, 'Save', :class => "btn pull-right btn-primary"
+  %h2= @title
   = r.error_notification
   .form-inputs
     .row-fluid
       .span6
         = r.input :owner_id, :as => :hidden
-        = r.input :name, :required => true, :autofocus => true
-        = r.input :description, :required => true, input_html: { rows: '10' }
+        = r.input :name, :required => true, :autofocus => true, disabled: @readonly
+        = r.input :description, input_html: { rows: '10' }, disabled: @readonly
       .span6
         = label_tag("People", nil, :class => "control-label")
         .control-group
           .controls
-            %input(class="typeahead input-xlarge" type="text" autocomplete="off" placeholder="Type here to add more people" )
-            %p
+            - if(!@readonly)
+              %input(class="typeahead input-xlarge" type="text" autocomplete="off" placeholder="Type here to add more people" )
+              %p
             #circle_users.well
               - @circle.user.each do |u|
                 .alert.alert-success
                   = hidden_field_tag("users[]", u.email, :class => "user-field")
-                  %button.close(type="button" data-dismiss="alert") &times;
+                  - if(!@readonly)
+                    %button.close(type="button" data-dismiss="alert") &times;
                   = u.email
               - @circle.candidate.each do |u|
                 .alert.alert-success
                   = hidden_field_tag("users[]", u.email, :class => "user-field")
-                  %button.close(type="button" data-dismiss="alert") &times;
+                  - if(!@readonly)
+                    %button.close(type="button" data-dismiss="alert") &times;
                   = u.email
 
 - content_for :script do

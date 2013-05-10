@@ -2,7 +2,6 @@ class Circle < ActiveRecord::Base
   before_destroy :clear_associations
   attr_accessible :description, :name, :owner_id
   
-  validates_presence_of :description
   validates_presence_of :name
   validates_presence_of :owner_id
   

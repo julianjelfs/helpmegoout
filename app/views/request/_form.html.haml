@@ -1,0 +1,62 @@
+= simple_form_for (@request) do |r|
+  = r.input :id, :as => :hidden
+  - if(!@readonly)
+    = r.button :submit, "Save", :class => "pull-right btn btn-primary"
+
+  %h2
+    =@title
+    - if(@show_accept)
+      %button.btn.btn-success.accept(title="Yes I'd love to" data-request-id="#{@request.id}")
+        %i.icon.icon-ok
+    - if(@show_reject)
+      %button.btn.btn-primary.reject(title="I'm sorry I can't" data-request-id="#{@request.id}")
+        %i.icon.icon-remove
+
+  = r.error_notification
+  .form-inputs
+    .row-fluid
+      .span6
+        - d = @request.date ? @request.date.strftime('%d %B %Y') : nil
+        = r.input :user_id, :as => :hidden
+        = r.input :date, :required => true, :as => :string, disabled:@readonly, input_html: {value:"#{d}"}
+        = r.input :start_time, :required => true, disabled:@readonly
+        = r.input :end_time, :required => true, disabled:@readonly
+        = r.input :description, input_html: { rows: '10' }, disabled:@readonly
+      .span6
+        = label_tag("Share with cricles", nil, :class => "control-label")
+        .control-group
+          .controls
+            - if(!@readonly)
+              %input(class="typeahead input-xlarge" type="text" autocomplete="off" placeholder="Type here to add more circles" )
+              %p
+            #circle_users.well
+              - @request.circle.each do |c|
+                .alert.alert-success
+                  = hidden_field_tag("circles[]", c.name, :class => "user-field")
+                  - if(!@readonly)
+                    %button.close(type="button" data-dismiss="alert") &times;
+                  = c.name
+
+- content_for :script do
+  :javascript
+    $(function(){
+      var id = $("#request_id").val();
+      $("ul.nav>li").removeClass("active");
+      $("#nav-goout").addClass("active");
+      $("#request_date").datepicker({
+          format: 'dd MM yyyy'
+      });
+
+      $("button.accept").click(function(e){
+        e.preventDefault();
+        $.post("/request/accept/" + id, function(data){
+          alert("Thank you!")
+          window.location.reload();
+        });
+      });
+      $("button.reject").click(function(e){
+        e.preventDefault();
+        alert("Thanks any way");
+        window.location.href = "/request";
+      });
+    });

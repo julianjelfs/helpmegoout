@@ -8,7 +8,8 @@ Sitters::Application.routes.draw do
   resources :circle
 
   match 'circle(.:format)' => 'circle#index', :as => :circles
-  
+  match 'request(.:format)' => 'request#index', :as => :requests
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -66,4 +67,6 @@ Sitters::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   match "circle/friend-search/:prefix"  => "circle#friend_search"
+  match "request/accept/:id"  => "request#accept"
+  match "request/reject/:id"  => "request#reject"
 end

@@ -12,8 +12,11 @@
     %tr
       %td= User.find(c.owner_id).email
       %td= c.name
-      %td= link_to_unless c.owner_id != current_user.id, raw('<i title="Edit Circle" class="icon icon-user"></i>'), edit_circle_path(c)
-      %td= link_to_unless c.owner_id != current_user.id, raw('<i title="Delete Circle" class="icon icon-trash"></i>'), c, method: :delete, data: { confirm: 'Are you sure?' }
+      - if(c.owner_id == current_user.id)
+        %td= link_to raw('<i title="Delete Circle" class="icon icon-trash"></i>'), c, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn"
+      - else
+        %td
+      %td= link_to raw('<i title="Edit Circle" class="icon icon-user"></i>'), edit_circle_path(c), :class => "btn"
 
 - content_for :script do
   :javascript

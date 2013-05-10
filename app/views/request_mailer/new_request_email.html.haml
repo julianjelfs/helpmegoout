@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      Help!
+    %p
+      Your friend #{@request.user.email} needs a baby sitter on #{@request.date.strftime('%d %B %Y')} from #{@request.start_time} to #{@request.end_time}
+    %p
+      If you can help follow the link below ...
+    %a(href="#{@url}") View Details
+    %p Thank you

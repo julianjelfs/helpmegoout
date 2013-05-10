@@ -13,6 +13,7 @@ gem 'rake', '~> 0.8.7'
 gem 'ZenTest', '4.6.0'
 gem 'delayed_job_active_record'
 gem "workless", "~> 1.1.1"
+gem "daemons"
 
 group :production do
   gem 'pg'
