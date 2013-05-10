@@ -14,6 +14,7 @@ gem 'ZenTest', '4.6.0'
 gem 'delayed_job_active_record'
 gem "workless", "~> 1.1.1"
 gem "daemons"
+gem 'newrelic_rpm'
 
 group :production do
   gem 'pg'
