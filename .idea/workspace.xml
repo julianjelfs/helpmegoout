@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f220fb97-b9e4-4733-b434-917f63355bda" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-    </list>
+    <list default="true" id="f220fb97-b9e4-4733-b434-917f63355bda" name="Default" comment="" />
     <ignored path="sitters.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368177487254" ignored="false" />
@@ -110,7 +107,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="39" selection-start="2603" selection-end="2603" vertical-scroll-proportion="0.6044776">
+            <state line="76" column="57" selection-start="2808" selection-end="2808" vertical-scroll-proportion="0.7164179">
               <folding />
             </state>
           </provider>
@@ -987,7 +984,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="39" selection-start="2603" selection-end="2603" vertical-scroll-proportion="0.6044776">
+        <state line="76" column="57" selection-start="2808" selection-end="2808" vertical-scroll-proportion="0.7164179">
           <folding />
         </state>
       </provider>
