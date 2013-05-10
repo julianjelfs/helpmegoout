@@ -76,7 +76,7 @@ Sitters::Application.configure do
       :password => ENV['SENDGRID_PASSWORD'],
       :authentication => :plain,
       :domain => "heroku.com",
-      :enable_starttls_auto => true
+      :enable_starttls_auto => true,
+      :openssl_verify_mode  => 'none'
   }
-
 end
