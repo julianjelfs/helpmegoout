@@ -7,7 +7,7 @@ class RequestController < ApplicationController
     if(@request)
       @request.volunteer = current_user
       @request.save
-      RequestMailer.delay.accept_request_email(@request)
+      RequestMailer.accept_request_email(@request).deliver
     end
     render json: @request
     end
@@ -15,10 +15,10 @@ class RequestController < ApplicationController
   def reject
     @request = Request.includes(:user).includes(:volunteer).find(params[:id]);
     if(@request && @request.volunteer && @request.volunteer == current_user)
-      RequestMailer.delay.reject_request_email(@request, @request.user.email, @request.volunteer.email)
+      RequestMailer.reject_request_email(@request, @request.user.email, @request.volunteer.email).deliver
       @request.volunteer = nil
       @request.save
-      RequestMailer.delay.new_request_email(@request)
+      RequestMailer.new_request_email(@request).deliver
     end
     render json: @request
   end
@@ -54,7 +54,7 @@ class RequestController < ApplicationController
     current_user.request << @request
     
     if current_user.save && @request.save
-      RequestMailer.delay.new_request_email(@request)
+      RequestMailer.new_request_email(@request).deliver
       redirect_to request_index_path, notive:"Request successfully created"
     else
       redirect_to :action => "new"
@@ -96,8 +96,8 @@ class RequestController < ApplicationController
     if @request.update_attributes(params[:request])
       # have the dates changed
       if(dates_changed)
-        logger.debug "About to do date changed email"
-        RequestMailer.delay.datechange_request_email(@original, @request)
+        # Having problems with delaying this one
+        RequestMailer.datechange_request_email(@original, @request).deliver
       end
       redirect_to request_index_url, notice: 'Request successfully updated'
     else

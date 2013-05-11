@@ -49,7 +49,7 @@ class CircleController < ApplicationController
           else
             c = Candidate.new(:email => u)
             @circle.candidate << c
-            UserMailer.delay.invitation_email(current_user, c)
+            UserMailer.invitation_email(current_user, c).deliver
           end
         end
       end
