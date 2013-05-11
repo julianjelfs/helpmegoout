@@ -85,15 +85,19 @@ class RequestController < ApplicationController
   end
 
   def update
-    @request = Request.find(params[:id])
+    @request = Request.includes(:volunteer).includes(:user).find(params[:id])
+    @original = @request.dup
     @new = Request.new(params[:request])
+
+    dates_changed = @request.volunteer && @new.date != @request.date || @new.start_time != @request.start_time || @new.end_time != @request.end_time
 
     process_circles
 
     if @request.update_attributes(params[:request])
       # have the dates changed
-      if(@new.date != @request.date || @new.start_time != @request.start_time || @new.end_time != @request.end_time)
-        RequestMailer.delay.datechange_request_email(@request, @new)
+      if(dates_changed)
+        logger.debug "About to do date changed email"
+        RequestMailer.delay.datechange_request_email(@original, @request)
       end
       redirect_to request_index_url, notice: 'Request successfully updated'
     else
@@ -112,8 +116,9 @@ class RequestController < ApplicationController
 
   def destroy
     @request = Request.find(params[:id])
+    @copy = @request.dup
     if(@request.volunteer)
-      RequestMailer.delay.delete_request_email(@request)
+      RequestMailer.delay.delete_request_email(@copy, @request.volunteer.email, @request.user.email)
     end
     @request.destroy
     redirect_to request_index_url

@@ -17,9 +17,9 @@ class RequestMailer < ActionMailer::Base
   end
 
   #if we cancel a request we just need to notify the volunteer if there is one
-  def delete_request_email(request)
-    @request = Request.includes(:user).includes(:volunteer).find(request.id)
-    mail(:to => @request.volunteer.email, :subject => "Your friend #{@request.user.email} no longer needs a baby sitter")
+  def delete_request_email(request, volunteer_email, user_email)
+    @request = request
+    mail(:to => volunteer_email, :subject => "Your friend #{user_email} no longer needs a baby sitter")
   end
 
   #if someone accepts the request email the request owner and let them know
@@ -38,11 +38,11 @@ class RequestMailer < ActionMailer::Base
   end
 
   #if some changes their dates send out the new request email and contact the volunteer if there is one
-  def datechange_request_email(previous, request)
-    @url = "http://www.helpmegoout.co.uk/request/#{request.id}/edit"
+  def datechange_request_email(previous, new)
+    @url = "http://www.helpmegoout.co.uk/request/#{new.id}/edit"
     @previous = previous
-    @request = Request.includes(:user).includes(:volunteer).find(request.id)
-    mail(:to => @request.volunteer.email, :subject => "The dates have changed for your baby sitting")
+    @new = new
+    mail(:to => previous.volunteer.email, :subject => "The dates have changed for your baby sitting")
   end
 
 end

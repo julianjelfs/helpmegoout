@@ -6,9 +6,9 @@
     %h1
       Warning!
     %p
-      You have kindly volunteered to baby sit for your friend #{@request.user.email} on #{@previous.date.strftime('%d %B %Y')} from #{@previous.start_time} to #{@previous.end_time}
+      You have kindly volunteered to baby sit for your friend #{@previous.user.email} on #{@previous.date.strftime('%d %B %Y')} from #{@previous.start_time} to #{@previous.end_time}
     %p
-      Unfortunately, the dates have been changed to #{@request.date.strftime('%d %B %Y')} from #{@request.start_time} to #{@request.end_time}
+      Unfortunately, the dates have been changed to #{@new.date.strftime('%d %B %Y')} from #{@new.start_time} to #{@new.end_time}
     %p
       If you can still baby sit on the new date, you don't need to do anything. If not, please follow the link below and indicate that
       you can no longer make it ...
