@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %p
+      You kindly volunteered to baby sit for your friend #{@request.user.email} on #{@request.date.strftime('%d %B %Y')} from #{@request.start_time} to #{@request.end_time}.
+    %p
+      Plans have changed and they no longer need you to baby sit.
+    %p Thank you very much for volunteering though.

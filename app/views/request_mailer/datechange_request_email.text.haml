@@ -1,0 +1,13 @@
+Warning!
+========
+
+You have kindly volunteered to baby sit for your friend #{@request.user.email} on #{@previous.date.strftime('%d %B %Y')} from #{@previous.start_time} to #{@previous.end_time}
+
+Unfortunately, the dates have been changed to #{@request.date.strftime('%d %B %Y')} from #{@request.start_time} to #{@request.end_time}
+
+If you can still baby sit on the new date, you don't need to do anything. If not, please follow the link below and indicate that
+you can no longer make it ...
+
+#{@url}
+
+Thank you

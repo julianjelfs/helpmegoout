@@ -7,15 +7,18 @@ class RequestController < ApplicationController
     if(@request)
       @request.volunteer = current_user
       @request.save
+      RequestMailer.delay.accept_request_email(@request)
     end
     render json: @request
     end
 
   def reject
-    @request = Request.find(params[:id]);
-    if(@request)
+    @request = Request.includes(:user).includes(:volunteer).find(params[:id]);
+    if(@request && @request.volunteer && @request.volunteer == current_user)
+      RequestMailer.delay.reject_request_email(@request, @request.user.email, @request.volunteer.email)
       @request.volunteer = nil
       @request.save
+      RequestMailer.delay.new_request_email(@request)
     end
     render json: @request
   end
@@ -83,10 +86,15 @@ class RequestController < ApplicationController
 
   def update
     @request = Request.find(params[:id])
+    @new = Request.new(params[:request])
 
     process_circles
 
     if @request.update_attributes(params[:request])
+      # have the dates changed
+      if(@new.date != @request.date || @new.start_time != @request.start_time || @new.end_time != @request.end_time)
+        RequestMailer.delay.datechange_request_email(@request, @new)
+      end
       redirect_to request_index_url, notice: 'Request successfully updated'
     else
       render action: 'edit'
@@ -104,6 +112,9 @@ class RequestController < ApplicationController
 
   def destroy
     @request = Request.find(params[:id])
+    if(@request.volunteer)
+      RequestMailer.delay.delete_request_email(@request)
+    end
     @request.destroy
     redirect_to request_index_url
   end

@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      Oh no!
+    %p
+      Your friend #{@volunteer_email} can no longer baby sit for you on #{@request.date.strftime('%d %B %Y')} from #{@request.start_time} to #{@request.end_time}
+    %p
+      Don't worry we have sent a new request to your circles so hopefully someone else can help.
+    %p Thank you
