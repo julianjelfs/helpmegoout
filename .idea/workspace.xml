@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f220fb97-b9e4-4733-b434-917f63355bda" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.html.haml" afterPath="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.text.haml" afterPath="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.text.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/request_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/request_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/request_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/request_mailer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sitters.iml" afterPath="$PROJECT_DIR$/.idea/sitters.iml" />
     </list>
     <ignored path="sitters.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +19,7 @@
     <file path="/temp.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368197041167" ignored="false" />
     <file path="/new.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368196439615" ignored="false" />
     <file path="/20130503163220_rename_foriegn_keys_in_circle_back_to_owner.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367598831212" ignored="false" />
-    <file path="/request_controller.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368309941635" ignored="false" />
+    <file path="/request_controller.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368310885898" ignored="false" />
     <file path="/Gemfile" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368304881917" ignored="false" />
     <file path="/application.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367785486093" ignored="false" />
     <file path="/20130505210255_add_score_to_user.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367787821329" ignored="false" />
@@ -133,19 +129,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="request_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="request_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/request_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="41" selection-start="3071" selection-end="3071" vertical-scroll-proportion="-15.357142">
+            <state line="119" column="89" selection-start="3665" selection-end="3665" vertical-scroll-proportion="0.765625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="2" selection-start="566" selection-end="566" vertical-scroll-proportion="0.5154185">
+            <state line="41" column="11" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -200,9 +196,9 @@
         <option value="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.html.haml" />
         <option value="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.text.haml" />
         <option value="$PROJECT_DIR$/app/mailers/request_mailer.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/request_controller.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/controllers/request_controller.rb" />
       </list>
     </option>
   </component>
@@ -1109,9 +1105,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/request_controller.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="41" selection-start="3071" selection-end="3071" vertical-scroll-proportion="-15.357142">
+        <state line="41" column="11" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1123,9 +1119,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/controllers/request_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="2" selection-start="566" selection-end="566" vertical-scroll-proportion="0.5154185">
+        <state line="119" column="89" selection-start="3665" selection-end="3665" vertical-scroll-proportion="0.765625">
           <folding />
         </state>
       </provider>

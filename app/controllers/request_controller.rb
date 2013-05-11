@@ -116,9 +116,9 @@ class RequestController < ApplicationController
 
   def destroy
     @request = Request.find(params[:id])
-    @copy = @request.dup
     if(@request.volunteer)
-      RequestMailer.delay.delete_request_email(@copy, @request.volunteer.email, @request.user.email)
+      # This has to go immediately because we need to do it before the thing is destroyed
+      RequestMailer.delete_request_email(@request, @request.volunteer.email, @request.user.email).deliver
     end
     @request.destroy
     redirect_to request_index_url
