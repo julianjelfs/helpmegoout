@@ -115,7 +115,7 @@
   width: 20px;
   height: 20px;
   background-color: #e57152;
-  background-image: -moz-linear-gradient(top, ##e57152, ##e57152);
+  background-image: -moz-linear-gradient(top, #e57152, #e57152);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e57152), to(#e57152));
   background-image: -webkit-linear-gradient(top, #e57152, #e57152);
   background-image: -o-linear-gradient(top, #e57152, #e57152);
