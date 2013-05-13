@@ -21,7 +21,7 @@
         = r.input :date, :required => true, :as => :string, disabled:@readonly, input_html: {value:"#{d}"}
         = r.input :start_time, :required => true, disabled:@readonly
         = r.input :end_time, :required => true, disabled:@readonly
-        = r.input :priority, collection: 1..10
+        = r.input :priority
         = r.input :description, input_html: { rows: '10' }, disabled:@readonly
       .span6
         = label_tag("Share with cricles", nil, :class => "control-label")
@@ -51,7 +51,10 @@
           format: 'dd MM yyyy'
       });
       
-      $("#request_priority").slider();
+      var priority = parseInt($("#request_priority").val());
+      $("#request_priority").slider({
+        value : priority
+      });
       
       function injectCircle(name){
         $("<div class='alert alert-success'><input type='hidden' name='circles[]' value='" + name + "'/><button class='close' type='button' data-dismiss='alert'>&times;</button>" + name + "</div>").appendTo("#circle_users");

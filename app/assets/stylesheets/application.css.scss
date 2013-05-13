@@ -24,6 +24,10 @@ body{
   font-family :"League Gothic";
 }
 
+#request_priority {
+  display : none;
+}
+
 .content {
   background-color: $background;
   padding: 20px;

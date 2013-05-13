@@ -4,6 +4,7 @@
 
 %table.table
   %tr
+    %th Priority
     %th Date
     %th Friend
     %th Message
@@ -14,6 +15,8 @@
   - @reqs.each do |r|
     - v = r.volunteer ? r.volunteer.email : nil
     %tr
+      %td
+        %span.badge.badge-important #{r.priority}
       %td= "#{r.date.strftime('%d %B %Y')} from #{r.start_time} to #{r.end_time}"
       %td= r.user.email
       %td= r.description
