@@ -1,6 +1,6 @@
 class Request < ActiveRecord::Base
   before_destroy :clear_associations
-  attr_accessible :date, :description, :end_time, :start_time, :user_id
+  attr_accessible :date, :description, :end_time, :start_time, :user_id, :priority
   
   belongs_to :user
   belongs_to :volunteer, :class_name => "User", :foreign_key => "volunteer_id"
@@ -11,6 +11,8 @@ class Request < ActiveRecord::Base
   validates_presence_of :date
   validates_presence_of :start_time
   validates_presence_of :end_time
+  validates_presence_of :priority
+  validates_numericality_of :priority
 
   private
     def clear_associations

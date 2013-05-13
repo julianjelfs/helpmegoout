@@ -4,7 +4,6 @@
 
 %table.table
   %tr
-    %th Id
     %th Date
     %th Friend
     %th Message
@@ -15,7 +14,6 @@
   - @reqs.each do |r|
     - v = r.volunteer ? r.volunteer.email : nil
     %tr
-      %td= r.id
       %td= "#{r.date.strftime('%d %B %Y')} from #{r.start_time} to #{r.end_time}"
       %td= r.user.email
       %td= r.description

@@ -24,7 +24,14 @@ class RequestController < ApplicationController
   end
 
   def index
-    @reqs = Request.includes(:volunteer).where("requests.date >= ? and exists (select 1 from circles_requests cr inner join circles c on cr.circle_id = c.id inner join circles_users cu on c.id = cu.circle_id where cu.user_id = ? )", Time.now, current_user.id).order("date")
+    # this is a bit horrible - don't know of a better way to this with active record without getting duplicate results
+    @reqs = Request.includes(:volunteer)
+      .where(" requests.date >= ?  
+               and exists ( select 1 
+                            from circles_requests cr inner join circles c 
+                              on cr.circle_id = c.id inner join circles_users cu 
+                              on c.id = cu.circle_id 
+                            where cu.user_id = ? )", Time.now, current_user.id).order("date")
     if(!@reqs)
       @reqs = []
     end
