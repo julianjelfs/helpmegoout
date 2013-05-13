@@ -24,7 +24,7 @@ class RequestController < ApplicationController
   end
 
   def index
-    @reqs = Request.includes(:volunteer).joins(:circle => :user).where("requests.date >= ? and circles_users.user_id = ?", Time.now, current_user.id).order("date")
+    @reqs = Request.includes(:volunteer).where("requests.date >= ? and exists (select 1 from circles_requests cr inner join circles c on cr.circle_id = c.id inner join circles_users cu on c.id = cu.circle_id where cu.user_id = ? )", Time.now, current_user.id).order("date")
     if(!@reqs)
       @reqs = []
     end

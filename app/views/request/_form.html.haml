@@ -27,7 +27,9 @@
         .control-group
           .controls
             - if(!@readonly)
-              %input(class="typeahead input-xlarge" type="text" autocomplete="off" placeholder="Type here to add more circles" )
+              %select#circles
+                - current_user.circle.each do |c|
+                  %option #{c.name}
               %p
             #circle_users.well
               - @request.circle.each do |c|
@@ -40,11 +42,31 @@
 - content_for :script do
   :javascript
     $(function(){
+      var circles = $("#circles");
       var id = $("#request_id").val();
       $("ul.nav>li").removeClass("active");
       $("#nav-goout").addClass("active");
       $("#request_date").datepicker({
           format: 'dd MM yyyy'
+      });
+      
+      function injectCircle(name){
+        $("<div class='alert alert-success'><input type='hidden' name='circles[]' value='" + name + "'/><button class='close' type='button' data-dismiss='alert'>&times;</button>" + name + "</div>").appendTo("#circle_users");
+      }
+      
+      circles.change(function(e){
+        var item = circles.val();
+        var dup = false;
+        $("input.user-field").each(function(){
+          if($(this).val() == item){
+            dup = true;
+            return false;
+          }
+        });
+        if(!dup){
+          injectCircle(item);
+        }
+        return "";
       });
 
       $("button.accept").click(function(e){
