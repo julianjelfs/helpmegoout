@@ -12,9 +12,9 @@
 
   - @circles.each do |c|
     %tr
-      %td= User.find(c.owner_id).email
+      %td= c.owner.name.blank? ? c.owner.email : c.owner.name
       %td= c.name
-      - if(c.owner_id == current_user.id)
+      - if(c.owner == current_user)
         %td= link_to raw('<i title="Delete Circle" class="icon icon-trash"></i>'), c, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn"
       - else
         %td

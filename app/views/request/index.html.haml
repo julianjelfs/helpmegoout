@@ -1,8 +1,7 @@
 -#= link_to "My Requests", request_index_path, :class => "btn btn-primary pull-right"
 -#= link_to "All Requests", request_index_path, :class => "btn btn-primary pull-right"
-%h2 Can you babysit on any of the following dates?
-
 = will_paginate @reqs, :class => "pagination pull-right", :previous_label => "prev", :next_label => "next"
+%h2 Can you babysit on any of the following dates?
 
 %table.table
   %tr
@@ -15,12 +14,12 @@
     %th(style="width:20px")
 
   - @reqs.each do |r|
-    - v = r.volunteer ? r.volunteer.email : nil
+    - v = r.volunteer ? (r.volunteer.name.blank? ? r.volunteer.email : r.volunteer.name) : nil
     %tr
       %td
         %span.badge.badge-important #{r.priority}
       %td= "#{r.date.strftime('%d %B %Y')} from #{r.start_time} to #{r.end_time}"
-      %td= r.user.email
+      %td= r.user.name.blank? ? r.user.email : r.user.name
       %td= r.description
       %td= v
       - if(r.user.id == current_user.id)
@@ -33,7 +32,7 @@
             %button.btn.btn-success.accept(title="Yes I'd love to" data-request-id="#{r.id}")
               %i.icon.icon-ok
         - else
-          -if(v && v == current_user.email)
+          -if(r.volunteer && r.volunteer == current_user)
             %td
               %button.btn.btn-primary.reject(title="Sorry I can't anymore" data-request-id="#{r.id}")
                 %i.icon.icon-remove

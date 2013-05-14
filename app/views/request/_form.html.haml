@@ -55,7 +55,8 @@
       
       var priority = parseInt($("#request_priority").val());
       $("#request_priority").slider({
-        value : priority
+        value : priority,
+        handle : 'square'
       });
       
       $("button.circle-popover").popover({html : true, trigger:'hover'}).click(function(e){
