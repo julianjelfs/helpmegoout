@@ -1,6 +1,8 @@
 = link_to 'New Circle', new_circle_path, :class => "btn btn-primary pull-right"
 %h2 These are the circles that you currenly belong to
 
+= will_paginate @circles, :class => "pagination pull-right", :previous_label => "prev", :next_label => "next"
+
 %table.table
   %tr
     %th Owner

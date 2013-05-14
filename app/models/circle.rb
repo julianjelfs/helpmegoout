@@ -1,4 +1,5 @@
 class Circle < ActiveRecord::Base
+  self.per_page = 8
   before_destroy :clear_associations
   attr_accessible :description, :name, :owner_id
   

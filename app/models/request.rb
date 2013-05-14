@@ -1,4 +1,5 @@
 class Request < ActiveRecord::Base
+  self.per_page = 8
   before_destroy :clear_associations
   attr_accessible :date, :description, :end_time, :start_time, :user_id, :priority
   

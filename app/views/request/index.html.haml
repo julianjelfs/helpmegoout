@@ -2,6 +2,8 @@
 -#= link_to "All Requests", request_index_path, :class => "btn btn-primary pull-right"
 %h2 Can you babysit on any of the following dates?
 
+= will_paginate @reqs, :class => "pagination pull-right", :previous_label => "prev", :next_label => "next"
+
 %table.table
   %tr
     %th Priority

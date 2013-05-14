@@ -7,7 +7,7 @@ class CircleController < ApplicationController
   end  
   
   def index
-    @circles = current_user.circle.all
+    @circles = current_user.circle.page(params[:page])
   end
 
   def new

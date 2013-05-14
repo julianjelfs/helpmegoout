@@ -31,7 +31,7 @@ class RequestController < ApplicationController
                             from circles_requests cr inner join circles c 
                               on cr.circle_id = c.id inner join circles_users cu 
                               on c.id = cu.circle_id 
-                            where cu.user_id = ? )", Time.now, current_user.id).order("date")
+                where cu.user_id = ? )", Time.now, current_user.id).order("date").page(params[:page])
     if(!@reqs)
       @reqs = []
     end

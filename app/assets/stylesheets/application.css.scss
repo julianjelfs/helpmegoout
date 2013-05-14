@@ -144,3 +144,30 @@ body{
 .circle-popover {
   margin-right:10px;
 }
+
+.pagination {
+  cursor: default;  
+  a,span,em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; 
+  }
+  .disabled {
+    color: #999999;
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    background: lighten($red,10%);
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: $red;
+  }
+  a:hover, a:focus {
+      color: darken($red, 10%);
+      border-color: $red; 
+  }
+}

@@ -15,6 +15,7 @@ gem 'delayed_job_active_record'
 gem "workless", "~> 1.1.1"
 gem "daemons"
 gem 'newrelic_rpm'
+gem 'will_paginate', '~> 3.0.0'
 
 group :production do
   gem 'pg'
