@@ -32,6 +32,6 @@
 
 - content_for :script do
   :javascript
-    $(function(){
+    $(document).on("page:load", function(){
       $("#myCarousel").carousel({interval:3000});
     });

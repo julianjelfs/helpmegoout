@@ -41,7 +41,7 @@
       $("<div class='alert alert-success'><input type='hidden' name='users[]' value='" + email + "'/><button class='close' type='button' data-dismiss='alert'>&times;</button>" + email + "</div>").appendTo("#circle_users");
     }
 
-    $(function(){
+    $(document).on("page:load", function(){
       $("ul.nav>li").removeClass("active");
       $("#nav-circles").addClass("active");
       $("input.typeahead")
