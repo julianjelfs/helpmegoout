@@ -11,6 +11,13 @@ class Circle < ActiveRecord::Base
   belongs_to :owner, :class_name => "User", :foreign_key => "owner_id"
 
 
+  def list_members
+    list = ""
+    user.map {|u| u.email}.each { |u| list += "<div>#{u}</div>"}
+    return list
+  end
+  
+  
   private
     def clear_associations
       self.user.clear

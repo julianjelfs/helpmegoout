@@ -49,6 +49,7 @@ class RequestController < ApplicationController
       @request.circle << current_user.circle.all
       @request.user_id = current_user.id;
       @request.description = "We just want to go out"
+      @request.priority = 0
     end
     @readonly = false
   end

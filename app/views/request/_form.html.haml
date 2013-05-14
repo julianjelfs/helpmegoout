@@ -36,6 +36,8 @@
               - @request.circle.each do |c|
                 .alert.alert-success
                   = hidden_field_tag("circles[]", c.name, :class => "user-field")
+                  %button.btn.circle-popover(title="Who's in the circle?" data-toggle="popover" data-placement="left" data-content="#{c.list_members()}")
+                    %i.icon.icon-user.pull-right
                   - if(!@readonly)
                     %button.close(type="button" data-dismiss="alert") &times;
                   = c.name
@@ -54,6 +56,10 @@
       var priority = parseInt($("#request_priority").val());
       $("#request_priority").slider({
         value : priority
+      });
+      
+      $("button.circle-popover").popover({html : true, trigger:'hover'}).click(function(e){
+        e.preventDefault();
       });
       
       function injectCircle(name){
