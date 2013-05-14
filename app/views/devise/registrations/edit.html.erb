@@ -5,15 +5,19 @@
   <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
   <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
-
-    <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-    <%= f.input :password_confirmation, :required => false %>
-    <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
+    <div class="row-fluid">
+      <div class="span6">
+        <%= f.input :email, :required => true, :autofocus => true %>
+        <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
+        <%= f.input :password_confirmation, :required => false %>
+        <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
+      </div>
+      <div class="span6">
+        <%= f.input :name %>
+        <%= f.input :address, input_html: { rows: '5' } %>
+        <%= f.input :phone %>
+      </div>
+    </div>
   </div>
 
 <% end %>
