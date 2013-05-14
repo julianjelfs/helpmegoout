@@ -18,9 +18,9 @@
               %p
             #circle_users.well
               - @circle.user.each do |u|
-                .alert.alert-success
+                %div{:class => u == @circle.owner ? "alert alert-info" : "alert alert-success"}
                   = hidden_field_tag("users[]", u.email, :class => "user-field")
-                  - if(!@readonly)
+                  - if(!@readonly  && !is_me(u))
                     %button.close(type="button" data-dismiss="alert") &times;
                   = u.email
               - @circle.candidate.each do |u|

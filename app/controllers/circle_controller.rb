@@ -2,6 +2,10 @@ class CircleController < ApplicationController
   
   before_filter :authenticate_user!
   
+  def is_me(user)
+    user == current_user
+  end  
+  
   def index
     @circles = current_user.circle.all
   end

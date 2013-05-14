@@ -8,7 +8,7 @@ class Circle < ActiveRecord::Base
   has_and_belongs_to_many :request
   has_and_belongs_to_many :user
   has_and_belongs_to_many :candidate
-  belongs_to :owner
+  belongs_to :owner, :class_name => "User", :foreign_key => "owner_id"
 
 
   private
