@@ -1,6 +1,5 @@
 -#= link_to "My Requests", request_index_path, :class => "btn btn-primary pull-right"
 -#= link_to "All Requests", request_index_path, :class => "btn btn-primary pull-right"
-= will_paginate @reqs, :class => "pagination pull-right", :previous_label => "prev", :next_label => "next"
 %h2 Can you babysit on any of the following dates?
 
 %table.table
@@ -38,6 +37,8 @@
                 %i.icon.icon-remove
           - else
             %td
+
+= will_paginate @reqs, :class => "pagination pull-right", :previous_label => "prev", :next_label => "next"
 
 #accept-modal.modal.hide
   .modal-header

@@ -1,8 +1,5 @@
 = link_to 'New Circle', new_circle_path, :class => "btn btn-primary pull-right"
 %h2 These are the circles that you currenly belong to
-
-= will_paginate @circles, :class => "pagination pull-right", :previous_label => "prev", :next_label => "next"
-
 %table.table
   %tr
     %th Owner
@@ -20,6 +17,8 @@
         %td
       %td= link_to raw('<i title="Edit Circle" class="icon icon-user"></i>'), edit_circle_path(c), :class => "btn"
 
+= will_paginate @circles, :class => "pagination pull-right", :previous_label => "prev", :next_label => "next"
+      
 - content_for :script do
   :javascript
     $(function(){
