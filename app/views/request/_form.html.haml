@@ -42,7 +42,7 @@
 
 - content_for :script do
   :javascript
-    $(document).on("page:load", function(){
+    $(function(){
       var circles = $("#circles");
       var id = $("#request_id").val();
       $("ul.nav>li").removeClass("active");

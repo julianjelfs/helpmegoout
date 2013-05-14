@@ -20,7 +20,7 @@
 
 - content_for :script do
   :javascript
-    $(document).on("page:load", function(){
+    $(function(){
       $("ul.nav>li").removeClass("active");
       $("#nav-circles").addClass("active");
     });
