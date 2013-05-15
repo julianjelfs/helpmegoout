@@ -15,6 +15,10 @@ class Request < ActiveRecord::Base
   validates_presence_of :priority
   validates_numericality_of :priority
   validates :priority, :inclusion => 0..10
+  
+  def self.delete_old
+    Request.where("date < ?", Date.yesterday).destroy_all
+  end
 
   private
     def clear_associations

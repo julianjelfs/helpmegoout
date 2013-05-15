@@ -1,0 +1,18 @@
+A friendly reminder
+===================
+
+Don't forget that you volunteered to baby sit for your friend #{@request.user.email} today (#{@request.date.strftime('%d %B %Y')}) from #{@request.start_time} to #{@request.end_time}
+
+- if(!@request.user.address.blank?)
+  Their address is:
+  #{@request.user.address}
+  
+- if(!@request.user.phone.blank?)
+  Their phone number is:
+  #{@request.user.phone}
+ 
+To check the details, follow this link:      
+     
+#{@url}
+
+Thank you

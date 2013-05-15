@@ -21,6 +21,12 @@ class RequestMailer < ActionMailer::Base
     @request = request
     mail(:to => volunteer_email, :subject => "Your friend #{user_email} no longer needs a baby sitter")
   end
+  
+  def babysitting_reminder(request)
+    @request = request
+    @url = "http://www.helpmegoout.co.uk/request/#{request.id}/edit"
+    mail(:to => request.volunteer.email, :subject => "Don't forget that you're baby sitting for #{request.user.email} today")
+  end
 
   #if someone accepts the request email the request owner and let them know
   def accept_request_email(request)

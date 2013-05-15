@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      A friendly reminder
+    %p
+      Don't forget that you volunteered to baby sit for your friend #{@request.user.email} today (#{@request.date.strftime('%d %B %Y')}) from #{@request.start_time} to #{@request.end_time}
+    - if(!@request.user.address.blank?)
+      %p 
+        Their address is:
+        #{@request.user.address}
+    
+    - if(!@request.user.phone.blank?)
+      %p 
+        Their phone number is:
+        #{@request.user.phone}
+    %p
+      To check the details, follow this link:      
+      
+    %a(href="#{@url}") View Details
+    %p Thank you
