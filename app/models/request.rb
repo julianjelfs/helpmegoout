@@ -16,8 +16,21 @@ class Request < ActiveRecord::Base
   validates_numericality_of :priority
   validates :priority, :inclusion => 0..10
   
+  def self.award_points
+    Request.where("date = ? and volunteer_id is not NULL", Date.yesterday).each do |r|
+      r.volunteer.score = r.volunteer.score ? r.volunteer.score + 1 : 1
+      r.volunteer.save
+    end
+  end
+  
   def self.delete_old
     Request.where("date < ?", Date.yesterday).destroy_all
+  end
+  
+  def self.todays_reminders
+    Request.where("date = ? and volunteer_id is not NULL", Date.today).each do |r|
+      RequestMailer.babysitting_reminder(r).deliver
+    end
   end
 
   private

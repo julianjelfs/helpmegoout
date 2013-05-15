@@ -7,6 +7,7 @@
     %th Priority
     %th Date
     %th Friend
+    %th Points
     %th Message
     %th Volunteer
     %th(style="width:20px")
@@ -18,7 +19,9 @@
       %td
         %span.badge.badge-important #{r.priority}
       %td= "#{r.date.strftime('%d %B %Y')} from #{r.start_time} to #{r.end_time}"
-      %td= r.user.name.blank? ? r.user.email : r.user.name
+      %td= "#{r.user.name.blank? ? r.user.email : r.user.name}"
+      %td 
+        %span.badge.badge-success= "#{r.user.score || 0}"
       %td= r.description
       %td= v
       - if(r.user.id == current_user.id)

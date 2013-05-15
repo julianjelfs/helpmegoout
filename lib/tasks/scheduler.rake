@@ -2,7 +2,7 @@ desc "This task is called by the Heroku scheduler add-on"
 task :daily_admin => :environment do
   
   puts "assign points to any volunteer who baby sat yesterday"
-  
+  Request.award_points
   puts "done"
   
   puts "Deleting old requests"
@@ -10,11 +10,7 @@ task :daily_admin => :environment do
   puts "done."
   
   puts "send out reminders for any requests due to happen today"
-  
-  Request.where("date = ? and volunteer_id is not NULL", Date.today).each do |r|
-    RequestMailer.babysitting_reminder(r).deliver
-  end
-  
+  Request.todays_reminders
   puts "done"
   
 end
