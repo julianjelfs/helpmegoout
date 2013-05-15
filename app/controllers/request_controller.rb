@@ -84,7 +84,7 @@ class RequestController < ApplicationController
 
     current_circles.each do |c|
       if(!params[:circles].include? c)
-        new_circle = Circle.where("email = ?", c).first
+        new_circle = Circle.where("name = ?", c).first
         if(new_circle)
           @request.circle.delete(new_circle)
         end
