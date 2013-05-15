@@ -65,7 +65,7 @@ class RequestController < ApplicationController
       RequestMailer.new_request_email(@request).deliver
       redirect_to request_index_path, notive:"Request successfully created"
     else
-      redirect_to :action => "new"
+      render :action => "new"
     end
   end
 

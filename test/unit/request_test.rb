@@ -1,4 +1,4 @@
-require 'test_helper'
+#require 'test_helper'
 
 class RequestTest < ActiveSupport::TestCase
   test "request must have a user id" do

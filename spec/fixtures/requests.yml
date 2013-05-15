@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+nouser:
+  date: 2013-04-30
+  start_time: MyString
+  end_time: MyString
+  priority: 1
+  
+nodate:
+  user_id: 1
+  start_time: MyString
+  end_time: MyString
+  priority: 1
+
+nostart:
+  user_id: 1
+  date: 2013-04-30
+  end_time: MyString
+  priority: 1
+  
+noend:
+  user_id: 1
+  date: 2013-04-30
+  start_time: MyString 
+  priority: 1
+  
+nopriority:
+  user_id: 1
+  date: 2013-04-30
+  start_time: MyString
+  end_time: MyString
+  
+valid:
+  user_id: 1
+  date: 2013-04-30
+  start_time: MyString
+  end_time: MyString
+  priority: 3

@@ -27,7 +27,7 @@ class CircleController < ApplicationController
 
       redirect_to circle_index_url, notice: 'Circle successfully created'
     else
-      redirect_to :action => 'new'
+      render :action => 'new'
     end
   end
 

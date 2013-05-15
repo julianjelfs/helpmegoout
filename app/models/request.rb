@@ -14,6 +14,7 @@ class Request < ActiveRecord::Base
   validates_presence_of :end_time
   validates_presence_of :priority
   validates_numericality_of :priority
+  validates :priority, :inclusion => 0..10
 
   private
     def clear_associations
