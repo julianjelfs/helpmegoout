@@ -11,7 +11,7 @@ task :daily_admin => :environment do
   
   puts "send out reminders for any requests due to happen today"
   
-  Request.where("date = ? and volunteer_id not null", Date.today).each do |r|
+  Request.where("date = ? and volunteer_id is not NULL", Date.today).each do |r|
     RequestMailer.babysitting_reminder(r).deliver
   end
   
