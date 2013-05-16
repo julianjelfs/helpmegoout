@@ -1,6 +1,16 @@
--#= link_to "My Requests", request_index_path, :class => "btn btn-primary pull-right"
--#= link_to "All Requests", request_index_path, :class => "btn btn-primary pull-right"
-%h2 Can you babysit on any of the following dates?
+= link_to "My Requests", 
+  request_index_path(:mine => "#{@mine ? 0 : 1}", 
+  :unfilled => "#{@unfilled ? 1 : 0}"), 
+  :title => "Only requests that I created or that I have volunteered for", 
+  :class => "btn #{@mine ? 'btn-primary' : ''} request-filter pull-right"
+  
+= link_to "Open Requests", 
+  request_index_path(:mine => "#{@mine ? 1 : 0}", 
+  :unfilled => "#{@unfilled ? 0 : 1}"), 
+  :title => "Only requests that have no volunteer", 
+  :class => "btn #{@unfilled ? 'btn-primary' : ''} request-filter pull-right"
+
+%h3 Can you babysit on any of the following dates?
 
 %table.table
   %tr
@@ -67,16 +77,20 @@
   :javascript
     $(function(){
       var r = null;
+      $("a.request-filter").tooltip({
+        placement : "bottom",
+        delay : 500
+      });
       $("ul.nav>li").removeClass("active");
       $("#nav-requests").addClass("active");
       $("button.reject").click(function(e){
          $("#reject-modal").modal("show");
          r = $(this).attr("data-request-id");
-      });
+      }).tooltip({placement : "right"});
       $("button.accept").click(function(e){
          $("#accept-modal").modal("show");
          r = $(this).attr("data-request-id");
-      });
+      }).tooltip({placement : "right"});
       $("#confirm-accept").click(function(e){
         $("#accept-modal").modal("hide");
         $.post("request/accept/" + r, function(data){

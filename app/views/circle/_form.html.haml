@@ -1,7 +1,7 @@
 = simple_form_for (@circle) do |r|
   - if(!@readonly)
     = r.button :submit, 'Save', :class => "btn pull-right btn-primary"
-  %h2= @title
+  %h3= @title
   = r.error_notification
   .form-inputs
     .row-fluid

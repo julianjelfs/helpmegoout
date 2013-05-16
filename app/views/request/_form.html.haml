@@ -3,7 +3,7 @@
   - if(!@readonly)
     = r.button :submit, "Save", :class => "pull-right btn btn-primary"
 
-  %h2
+  %h3
     =@title
     - if(@show_accept)
       %button.btn.btn-success.accept(title="Yes I'd love to" data-request-id="#{@request.id}")

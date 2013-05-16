@@ -24,14 +24,26 @@ class RequestController < ApplicationController
   end
 
   def index
-    # this is a bit horrible - don't know of a better way to this with active record without getting duplicate results
-    @reqs = Request.includes(:volunteer)
-      .where(" requests.date >= ?  
-               and exists ( select 1 
-                            from circles_requests cr inner join circles c 
-                              on cr.circle_id = c.id inner join circles_users cu 
-                              on c.id = cu.circle_id 
-                where cu.user_id = ? )", Time.now, current_user.id).order("date").page(params[:page])
+    @mine = params[:mine] == "1"
+    @unfilled = params[:unfilled] == "1"
+    
+    where = "requests.date >= ? "
+    if(@mine)
+      where += "and (requests.user_id = " + current_user.id.to_s + " or requests.volunteer_id = " + current_user.id.to_s + ") "
+    end
+    
+    if(@unfilled)
+      where += " and requests.volunteer_id is NULL "
+    end
+    
+    where += " and exists ( select 1 
+              from circles_requests cr inner join circles c 
+              on cr.circle_id = c.id inner join circles_users cu 
+              on c.id = cu.circle_id 
+              where cu.user_id = ? )"
+    
+    @reqs = Request.where(where, Time.now, current_user.id).order("date").page(params[:page])
+          
     if(!@reqs)
       @reqs = []
     end

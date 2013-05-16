@@ -28,6 +28,10 @@ body{
   display : none;
 }
 
+.request-filter{
+  margin-right:5px;  
+}
+
 .content {
   background-color: $background;
   padding: 20px;
@@ -35,9 +39,9 @@ body{
   -webkit-border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px;
-  -webkit-box-shadow: 3px 3px 3px rgba(76,43,47,.4);
-  -moz-box-shadow: 3px 3px 3px rgba(76,43,47,.4);
-  box-shadow: 3px 3px 3px rgba(76,43,47,.4);
+  -webkit-box-shadow: 3px 3px 8px rgba(76,43,47,.4);
+  -moz-box-shadow: 3px 3px 8px rgba(76,43,47,.4);
+  box-shadow: 3px 3px 8px rgba(76,43,47,.4);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($white), to($background));
   background: -webkit-linear-gradient(top, $background, $white);
   background: -moz-linear-gradient(top, $background, $white);
@@ -103,7 +107,7 @@ body{
   font-size:18px;
   font-weight:bold;
   font-style:italic;
-  text-shadow: 1px 1px -1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   padding: 20px;
   margin: 0 -20px;
 
@@ -112,12 +116,13 @@ body{
     padding:20px;
     margin-bottom: 10px;
     background-color: $yellow;
-    -webkit-border-radius: 6px 6px 6px 6px;
+    /*-webkit-border-radius: 6px 6px 6px 6px;
     -moz-border-radius: 6px 6px 6px 6px;
-    border-radius: 6px 6px 6px 6px;
-    -webkit-box-shadow: 3px 3px 3px rgba(76,43,47,.4);
-    -moz-box-shadow: 3px 3px 3px rgba(76,43,47,.4);
-    box-shadow: 3px 3px 3px rgba(76,43,47,.4);
+    border-radius: 6px 6px 6px 6px;*/
+    -webkit-box-shadow: 4px 4px 10px rgba(76,43,47,.4);
+    -moz-box-shadow: 4px 4px 10px rgba(76,43,47,.4);
+    box-shadow: 4px 4px 10px rgba(76,43,47,.4);
+    min-height:60px;
   }
 }
 
