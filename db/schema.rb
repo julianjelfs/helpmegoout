@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514125220) do
+ActiveRecord::Schema.define(:version => 20130516191516) do
 
   create_table "candidates", :force => true do |t|
     t.string   "email"
@@ -19,10 +19,15 @@ ActiveRecord::Schema.define(:version => 20130514125220) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "candidates", ["email"], :name => "index_candidates_on_email"
+
   create_table "candidates_circles", :id => false, :force => true do |t|
     t.integer "candidate_id"
     t.integer "circle_id"
   end
+
+  add_index "candidates_circles", ["candidate_id"], :name => "index_candidates_circles_on_candidate_id"
+  add_index "candidates_circles", ["circle_id"], :name => "index_candidates_circles_on_circle_id"
 
   create_table "children", :force => true do |t|
     t.string   "name"
@@ -40,15 +45,23 @@ ActiveRecord::Schema.define(:version => 20130514125220) do
     t.datetime "updated_at",  :null => false
   end
 
+  add_index "circles", ["owner_id"], :name => "index_circles_on_owner_id"
+
   create_table "circles_requests", :id => false, :force => true do |t|
     t.integer "circle_id"
     t.integer "request_id"
   end
 
+  add_index "circles_requests", ["circle_id"], :name => "index_circles_requests_on_circle_id"
+  add_index "circles_requests", ["request_id"], :name => "index_circles_requests_on_request_id"
+
   create_table "circles_users", :id => false, :force => true do |t|
     t.integer "circle_id"
     t.integer "user_id"
   end
+
+  add_index "circles_users", ["circle_id"], :name => "index_circles_users_on_circle_id"
+  add_index "circles_users", ["user_id"], :name => "index_circles_users_on_user_id"
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -77,6 +90,9 @@ ActiveRecord::Schema.define(:version => 20130514125220) do
     t.integer  "volunteer_id"
     t.integer  "priority"
   end
+
+  add_index "requests", ["user_id"], :name => "index_requests_on_user_id"
+  add_index "requests", ["volunteer_id"], :name => "index_requests_on_volunteer_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
