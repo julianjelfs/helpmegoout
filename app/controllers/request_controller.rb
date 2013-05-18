@@ -38,7 +38,8 @@ class RequestController < ApplicationController
     
     where += " and exists ( select 1 
               from circles_requests cr inner join circles c 
-              on cr.circle_id = c.id inner join circles_users cu 
+              on cr.circle_id = c.id 
+              and requests.id = cr.request_id inner join circles_users cu 
               on c.id = cu.circle_id 
               where cu.user_id = ? )"
     
