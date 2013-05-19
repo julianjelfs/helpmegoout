@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f220fb97-b9e4-4733-b434-917f63355bda" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sitters.iml" afterPath="$PROJECT_DIR$/.idea/sitters.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sitters.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +19,7 @@
     <file path="/new.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368196439615" ignored="false" />
     <file path="/20130503163220_rename_foriegn_keys_in_circle_back_to_owner.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367598831212" ignored="false" />
     <file path="/request_controller.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368311143179" ignored="false" />
-    <file path="/Gemfile" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368304881917" ignored="false" />
+    <file path="/Gemfile" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368957157694" ignored="false" />
     <file path="/application.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367785486093" ignored="false" />
     <file path="/20130505210255_add_score_to_user.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367787821329" ignored="false" />
     <file path="/circle.js" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367791111009" ignored="false" />
@@ -100,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="32" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
+            <state line="35" column="3" selection-start="621" selection-end="621" vertical-scroll-proportion="0.54924875">
               <folding />
             </state>
           </provider>
@@ -163,10 +158,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feedbacks_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="feedbacks_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/feedbacks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="10" selection-start="853" selection-end="853" vertical-scroll-proportion="0.65108514">
+            <state line="23" column="101" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -201,11 +196,11 @@
         <option value="$PROJECT_DIR$/app/controllers/circle_controller.rb" />
         <option value="$PROJECT_DIR$/app/mailers/feedback_mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/feedback_mailer/feedback.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation.html.haml" />
         <option value="$PROJECT_DIR$/app/views/feedbacks/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/feedbacks_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -1175,13 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="32" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="839" selection-end="839" vertical-scroll-proportion="-13.958333">
@@ -1212,7 +1200,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/feedbacks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="10" selection-start="853" selection-end="853" vertical-scroll-proportion="0.65108514">
+        <state line="23" column="101" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="3" selection-start="621" selection-end="621" vertical-scroll-proportion="0.54924875">
           <folding />
         </state>
       </provider>
