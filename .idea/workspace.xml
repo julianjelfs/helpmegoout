@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f220fb97-b9e4-4733-b434-917f63355bda" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sitters.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,6 +55,8 @@
     <file path="/feedback_mailer.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368956051430" ignored="false" />
     <file path="/feedback.html.erb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368956080320" ignored="false" />
     <file path="/feedbacks_controller.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368957091904" ignored="false" />
+    <file path="/feedback.css.scss" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368990107341" ignored="false" />
+    <file path="/application.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368990476801" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,24 +81,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user_mailer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="14" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="circle_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/circle_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="40" selection-start="1941" selection-end="1941" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
@@ -104,37 +90,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <file leaf-file-name="feedback.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/feedback.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="839" selection-end="839" vertical-scroll-proportion="-13.958333">
+            <state line="23" column="48" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1368990295543" expanded="true" signature="2166:2286" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="closelabel.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/closelabel.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedback_tab.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/feedback_tab.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedback_tab_h.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/feedback_tab_h.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loading.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/loading.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.feedback.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.feedback.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="20" selection-start="2727" selection-end="2735" vertical-scroll-proportion="-6.642857">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_navigation.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.haml">
+      <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="41" selection-start="628" selection-end="628" vertical-scroll-proportion="-12.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feedback_mailer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/mailers/feedback_mailer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="55" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feedback.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/feedback_mailer/feedback.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="11" selection-start="240" selection-end="240" vertical-scroll-proportion="-6.875">
+            <state line="14" column="0" selection-start="547" selection-end="560" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,19 +156,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feedback.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/feedback.rb">
+      <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feedbacks_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/feedbacks_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="101" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+            <state line="26" column="36" selection-start="875" selection-end="875" vertical-scroll-proportion="-14.958333">
               <folding />
             </state>
           </provider>
@@ -185,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/request_mailer/reject_request_email.text.haml" />
         <option value="$PROJECT_DIR$/app/views/request/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.html.haml" />
         <option value="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.text.haml" />
@@ -196,10 +193,11 @@
         <option value="$PROJECT_DIR$/app/controllers/circle_controller.rb" />
         <option value="$PROJECT_DIR$/app/mailers/feedback_mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/feedback_mailer/feedback.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation.html.haml" />
         <option value="$PROJECT_DIR$/app/views/feedbacks/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/feedbacks_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/feedback.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
@@ -474,24 +472,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sitters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sitters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1100,55 +1080,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/delete_request_email.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.text.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/request_mailer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="55" selection-start="2052" selection-end="2052" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="26" selection-start="1641" selection-end="1647" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/request_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="38" selection-start="3738" selection-end="3738" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/circle_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="40" selection-start="1941" selection-end="1941" vertical-scroll-proportion="0.0">
@@ -1170,13 +1101,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="839" selection-end="839" vertical-scroll-proportion="-13.958333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="41" selection-start="628" selection-end="628" vertical-scroll-proportion="-12.5">
@@ -1191,6 +1115,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/feedbacks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="101" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="547" selection-end="560" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/closelabel.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/feedback_tab_h.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/loading.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.feedback.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="20" selection-start="2727" selection-end="2735" vertical-scroll-proportion="-6.642857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/feedback_tab.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/feedback.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="48" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1368990295543" expanded="true" signature="2166:2286" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/feedbacks/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="48" selection-start="519" selection-end="519" vertical-scroll-proportion="-12.5">
@@ -1198,9 +1172,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/feedbacks_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="101" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+        <state line="26" column="36" selection-start="875" selection-end="875" vertical-scroll-proportion="-14.958333">
           <folding />
         </state>
       </provider>
