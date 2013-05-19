@@ -73,6 +73,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
+    modernizr-rails (2.6.2.1)
     multi_json (1.7.2)
     newrelic_rpm (3.6.2.96)
     orm_adapter (0.4.0)
@@ -173,6 +174,7 @@ DEPENDENCIES
   devise
   haml
   jquery-rails
+  modernizr-rails
   newrelic_rpm
   pg
   rails
