@@ -30,9 +30,18 @@ class RequestMailer < ActionMailer::Base
 
   #if someone accepts the request email the request owner and let them know
   def accept_request_email(request)
+    @request = Request.includes(:user).includes(:volunteer).joins(:circle => :user).find(request.id)
+    to = []
+    @request.circle.each do |c|
+      c.user.each do |u|
+        if(u.id != @request.user.id)
+          to << u.email
+        end
+      end
+    end
+
     @url = "http://www.helpmegoout.co.uk/request/#{request.id}/edit"
-    @request = Request.includes(:user).includes(:volunteer).find(request.id)
-    mail(:to => @request.user.email, :subject => "Your friend #{@request.volunteer.email} has volunteered to baby sit for you")
+    mail(:to => to, :subject => "#{@request.volunteer.email} has volunteered to baby sit for #{@request.user.email}")
   end
 
   #if someone rejects a request notify the request owner and then re-send the new request email
