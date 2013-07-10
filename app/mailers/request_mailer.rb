@@ -34,9 +34,7 @@ class RequestMailer < ActionMailer::Base
     to = []
     @request.circle.each do |c|
       c.user.each do |u|
-        if(u.id != @request.user.id)
-          to << u.email
-        end
+        to << u.email
       end
     end
 
