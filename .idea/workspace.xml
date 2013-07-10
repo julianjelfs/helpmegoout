@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f220fb97-b9e4-4733-b434-917f63355bda" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/circle_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/circle_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/request_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/request_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sitters.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368263563272" ignored="false" />
+    <file path="/Dummy.txt" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368955656059" ignored="false" />
     <file path="/Ruby Console" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367497454556" ignored="false" />
     <file path="/circle_spec.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367591928269" ignored="false" />
     <file path="/candidate.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367592351468" ignored="false" />
@@ -20,7 +21,7 @@
     <file path="/new.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368196439615" ignored="false" />
     <file path="/20130503163220_rename_foriegn_keys_in_circle_back_to_owner.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367598831212" ignored="false" />
     <file path="/request_controller.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368311143179" ignored="false" />
-    <file path="/Gemfile" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368304881917" ignored="false" />
+    <file path="/Gemfile" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368957157694" ignored="false" />
     <file path="/application.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367785486093" ignored="false" />
     <file path="/20130505210255_add_score_to_user.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367787821329" ignored="false" />
     <file path="/circle.js" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367791111009" ignored="false" />
@@ -28,7 +29,7 @@
     <file path="/application.css.scss" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367959084426" ignored="false" />
     <file path="/_navigation.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367962495598" ignored="false" />
     <file path="/bootstrap_and_overrides.css.scss" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1367962335680" ignored="false" />
-    <file path="/new.html.erb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368134629321" ignored="false" />
+    <file path="/new.html.erb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368956997016" ignored="false" />
     <file path="/edit.html.erb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368134547454" ignored="false" />
     <file path="/user_mailer.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368125682311" ignored="false" />
     <file path="/invitation_email.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368125954329" ignored="false" />
@@ -51,6 +52,11 @@
     <file path="/reject_request_email.text.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368265103197" ignored="false" />
     <file path="/datechange_request_email.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368309229052" ignored="false" />
     <file path="/datechange_request_email.text.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368309266430" ignored="false" />
+    <file path="/feedback_mailer.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368956051430" ignored="false" />
+    <file path="/feedback.html.erb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368956080320" ignored="false" />
+    <file path="/feedbacks_controller.rb" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368957091904" ignored="false" />
+    <file path="/feedback.css.scss" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368990107341" ignored="false" />
+    <file path="/application.html.haml" changelist="f220fb97-b9e4-4733-b434-917f63355bda" time="1368990476801" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,91 +81,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="request_mailer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/mailers/request_mailer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="55" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="delete_request_email.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/request_mailer/delete_request_email.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="20" selection-start="415" selection-end="415" vertical-scroll-proportion="-6.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datechange_request_email.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="689" selection-end="689" vertical-scroll-proportion="-10.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datechange_request_email.text.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.text.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="52" selection-start="248" selection-end="248" vertical-scroll-proportion="-3.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="request_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/request_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="38" selection-start="3130" selection-end="3130" vertical-scroll-proportion="-11.892858">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_mailer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="14" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="circle_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/circle_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="39" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.92021275">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="11" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
+            <state line="35" column="3" selection-start="621" selection-end="621" vertical-scroll-proportion="0.54924875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rails sitters: development" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/cd20bbd2/9c57be66-868e-434b-8daa-67b83374df35/">
+      <file leaf-file-name="feedback.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/feedback.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="26" vertical-scroll-proportion="-0.0">
+            <state line="23" column="48" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1368990295543" expanded="true" signature="2166:2286" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="closelabel.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/closelabel.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedback_tab.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/feedback_tab.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedback_tab_h.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/feedback_tab_h.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loading.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/loading.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.feedback.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.feedback.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="20" selection-start="2727" selection-end="2735" vertical-scroll-proportion="-6.642857">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="26" selection-start="1641" selection-end="1647" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="547" selection-end="560" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/feedbacks/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="48" selection-start="519" selection-end="519" vertical-scroll-proportion="-12.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="36" selection-start="875" selection-end="875" vertical-scroll-proportion="-14.958333">
               <folding />
             </state>
           </provider>
@@ -183,22 +183,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/functional/request_mailer_test.rb" />
-        <option value="$PROJECT_DIR$/app/views/request_mailer/delete_request_email.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/request_mailer/delete_request_email.text.haml" />
-        <option value="$PROJECT_DIR$/app/views/request_mailer/accept_request_email.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/request_mailer/accept_request_email.text.haml" />
-        <option value="$PROJECT_DIR$/app/views/request_mailer/reject_request_email.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/request_mailer/reject_request_email.text.haml" />
         <option value="$PROJECT_DIR$/app/views/request/_form.html.haml" />
-        <option value="db-console:/cd20bbd2/9c57be66-868e-434b-8daa-67b83374df35/" />
         <option value="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.html.haml" />
         <option value="$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.text.haml" />
         <option value="$PROJECT_DIR$/app/mailers/request_mailer.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/request_controller.rb" />
+        <option value="db-console:/cd20bbd2/9c57be66-868e-434b-8daa-67b83374df35/" />
         <option value="$PROJECT_DIR$/app/controllers/circle_controller.rb" />
+        <option value="$PROJECT_DIR$/app/mailers/feedback_mailer.rb" />
+        <option value="$PROJECT_DIR$/app/views/feedback_mailer/feedback.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_navigation.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/feedbacks/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/feedbacks_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/feedback.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -210,10 +210,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
-    <option name="y" value="70" />
-    <option name="width" value="1437" />
-    <option name="height" value="788" />
+    <option name="x" value="-3" />
+    <option name="width" value="1606" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -373,22 +372,8 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sitters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sitters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mailers" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,30 +391,110 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feedbacks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feedback_mailer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="217" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="227" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="182" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="190" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="217" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="182" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="232" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="194" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1142" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1142" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="232" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="227" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="945" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="945" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="194" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="190" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -927,25 +992,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="70" width="1437" height="788" extended-state="0" />
+    <frame x="-3" y="0" width="1606" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845744" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294686" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32579187" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06209386" sideWeight="0.67420816" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.045688547" sideWeight="0.26080248" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67110264" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34223828" sideWeight="0.67420816" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26254827" sideWeight="0.26080248" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.73919755" sideWeight="0.7387387" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845744" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="97" y="100" width="1406" height="677" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32579187" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1015,114 +1080,108 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/new_request_email.text.haml">
+    <entry file="file://$PROJECT_DIR$/app/controllers/circle_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="24" selection-start="0" selection-end="221" vertical-scroll-proportion="-5.625">
+        <state line="81" column="40" selection-start="1941" selection-end="1941" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/reject_request_email.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/mailers/feedback_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="312" selection-end="402" vertical-scroll-proportion="-6.25">
+        <state line="5" column="55" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/reject_request_email.text.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/feedback_mailer/feedback.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="-4.375">
+        <state line="11" column="11" selection-start="240" selection-end="240" vertical-scroll-proportion="-6.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/new_request_email.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="38" selection-start="0" selection-end="398" vertical-scroll-proportion="-8.125">
+        <state line="20" column="41" selection-start="628" selection-end="628" vertical-scroll-proportion="-12.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/circle/_form.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/models/feedback.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="58" selection-start="367" selection-end="393" vertical-scroll-proportion="-2.3461537">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/request/_form.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/controllers/feedbacks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="49" selection-start="1081" selection-end="1081" vertical-scroll-proportion="-7.5">
+        <state line="23" column="101" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://db-console:/cd20bbd2/9c57be66-868e-434b-8daa-67b83374df35/">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="26" vertical-scroll-proportion="0.0">
+        <state line="14" column="0" selection-start="547" selection-end="560" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/delete_request_email.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/closelabel.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/feedback_tab_h.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/loading.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.feedback.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="415" selection-end="415" vertical-scroll-proportion="-6.25">
+        <state line="74" column="20" selection-start="2727" selection-end="2735" vertical-scroll-proportion="-6.642857">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.text.haml">
+    <entry file="file://$PROJECT_DIR$/app/assets/images/feedback/feedback_tab.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/feedback.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="248" selection-end="248" vertical-scroll-proportion="-3.125">
+        <state line="23" column="48" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1368990295543" expanded="true" signature="2166:2286" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/feedbacks/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="48" selection-start="519" selection-end="519" vertical-scroll-proportion="-12.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/request_mailer/datechange_request_email.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="689" selection-end="689" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/request_mailer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="55" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.0">
+        <state line="26" column="36" selection-start="875" selection-end="875" vertical-scroll-proportion="-14.958333">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="11" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="26" selection-start="1641" selection-end="1647" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/request_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="38" selection-start="3130" selection-end="3130" vertical-scroll-proportion="-11.892858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/circle_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="39" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.92021275">
+        <state line="35" column="3" selection-start="621" selection-end="621" vertical-scroll-proportion="0.54924875">
           <folding />
         </state>
       </provider>
